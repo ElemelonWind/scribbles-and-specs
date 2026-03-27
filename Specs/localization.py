@@ -10,7 +10,7 @@ CAMERA_INDEX = 0
 WINDOW_NAME = "Scribbles Localization"
 
 # Configuration for board and bot AprilTags
-BOARD_CORNER_TAG_IDS = [0, 1, 2, 3]  # TL, TR, BR, BL
+BOARD_CORNER_TAG_IDS = [1, 2, 3, 4]  # TL, TR, BR, BL
 BOT_TAG_ID = 10
 CORNER_TAG_SIZE_M = 0.100  # meters (adjust to real tag size)
 BOT_TAG_SIZE_M = 0.050
