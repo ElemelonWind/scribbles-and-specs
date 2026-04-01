@@ -2,6 +2,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
+from std_msgs.msg import Bool, Float32MultiArray
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
@@ -79,6 +80,12 @@ def localize_bot(tag_center, board_corners):
     }
 
 
+def get_board_homography(board_corners):
+    dst_pts = np.array([[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]], dtype=np.float32)
+    H, status = cv2.findHomography(board_corners, dst_pts)
+    return H
+
+
 def process_frame(frame, detector):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     detections = detector.detect(gray)
@@ -94,8 +101,12 @@ def process_frame(frame, detector):
     if board_corners is not None:
         cv2.polylines(frame, [np.int32(board_corners)], True, (0, 255, 255), 3)
         output["board_detected"] = True
+        output["board_homography"] = get_board_homography(board_corners)
+        output["board_corners"] = board_corners
     else:
         output["board_detected"] = False
+        output["board_homography"] = None
+        output["board_corners"] = None
 
     if bot_detection is not None and board_corners is not None:
         loc = localize_bot(bot_detection['center'], board_corners)
@@ -119,6 +130,11 @@ class LocalizationNode(Node):
         super().__init__('localization')
         self.bridge = CvBridge()
         self.detector = create_detector()
+
+        self.board_detected_pub = self.create_publisher(Bool, '/specs/board_detected', 10)
+        self.board_homography_pub = self.create_publisher(Float32MultiArray, '/specs/board_homography', 10)
+        self.board_corners_pub = self.create_publisher(Float32MultiArray, '/specs/board_corners', 10)
+
         self.subscription = self.create_subscription(
             Image,
             '/camera/image_raw',
@@ -135,6 +151,16 @@ class LocalizationNode(Node):
             return
 
         frame, output = process_frame(frame, self.detector)
+
+        self.board_detected_pub.publish(Bool(data=output["board_detected"]))
+        if output.get("board_homography") is not None:
+            self.board_homography_pub.publish(
+                Float32MultiArray(data=output["board_homography"].reshape(-1).tolist())
+            )
+        if output.get("board_corners") is not None:
+            self.board_corners_pub.publish(
+                Float32MultiArray(data=output["board_corners"].reshape(-1).tolist())
+            )
 
         if output["board_detected"]:
             if output["bot_location"]:

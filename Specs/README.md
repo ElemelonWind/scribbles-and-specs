@@ -1,10 +1,12 @@
 # specs ROS 2 Package
 
-This package contains three ROS 2 Python nodes that subscribe to `/camera/image_raw` and process camera frames:
+This package contains four ROS 2 Python nodes that subscribe to `/camera/image_raw` and process camera frames:
 
 - `video_display.py` — displays camera frames in grayscale
 - `apriltag_test.py` — detects a single AprilTag and draws the detection
-- `localization.py` — detects AprilTags and localizes a bot relative to board corners
+- `localization.py` — detects AprilTags, localizes a bot relative to board corners, and publishes board state data
+- `ink_detection.py` — detects ink marks inside the board region, computes board-relative normalized waypoints, and publishes them for erasing
+- `socket_test.py` — opens a TCP socket to Scribbles, sends a `ping`, and logs the response
 
 ## Requirements
 
