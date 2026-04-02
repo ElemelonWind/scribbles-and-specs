@@ -22,6 +22,7 @@ From the package directory:
 
 ```bash
 cd /home/mbot/scribbles-and-specs/Specs
+chmod +x localization.py ink_detection.py socket_test.py # might need to run
 colcon build --symlink-install
 ```
 

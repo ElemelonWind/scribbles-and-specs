@@ -6,9 +6,23 @@ from rclpy.node import Node
 
 def send_ping(host: str, port: int) -> str:
     with socket.create_connection((host, port), timeout=5) as sock:
-        sock.sendall(b'ping\n')
-        data = sock.recv(128)
-        return data.decode('utf-8', errors='replace').strip()
+        payload = 'ping'.encode('utf-8')
+        sock.sendall(payload + b'\n')
+
+        # wait for complete reply from server (timeout part handled by underlying socket)
+        data = sock.recv(256)
+        if not data:
+            raise RuntimeError('Empty response from server')
+
+        text = data.decode('utf-8', errors='replace').strip()
+        if text.lower() == 'pong':
+            return text
+
+        # Some servers may return full text or include ping in reply.
+        if 'pong' in text.lower():
+            return 'pong'
+
+        return text
 
 
 class SocketTestNode(Node):

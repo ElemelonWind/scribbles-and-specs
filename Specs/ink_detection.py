@@ -7,6 +7,7 @@ from geometry_msgs.msg import PoseArray, Pose
 from cv_bridge import CvBridge
 import cv2
 import numpy as np
+import apriltag
 
 WINDOW_NAME = "Specs Ink Detection"
 GRID_ROWS = 10
@@ -19,13 +20,94 @@ def create_board_mask(shape, corners):
     return mask
 
 
-def extract_ink_mask(gray, board_mask):
-    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
-    _, ink_mask = cv2.threshold(blurred, 180, 255, cv2.THRESH_BINARY_INV)
+def create_apriltag_detector():
+    if apriltag is not None:
+        if hasattr(apriltag, 'Detector'):
+            return apriltag.Detector()
+        if hasattr(apriltag, 'apriltag'):
+            return apriltag.apriltag('tag36h11')
+        if callable(apriltag):
+            return apriltag()
+    return None
+
+
+def create_apriltag_exclusion_mask(shape, detections, padding=12):
+    mask = np.zeros(shape, dtype=np.uint8)
+    if detections is None:
+        return mask
+
+    for d in detections:
+        if 'lb-rb-rt-lt' in d:
+            poly = np.int32(d['lb-rb-rt-lt']).reshape(-1, 2)
+            hull = cv2.convexHull(poly)
+            cv2.fillPoly(mask, [hull], 255)
+            for (cx, cy) in hull.reshape(-1, 2):
+                cv2.circle(mask, (int(cx), int(cy)), padding, 255, -1)
+
+    return mask
+
+
+def extract_ink_mask(gray, board_mask, apriltag_mask=None, mode='auto'):
+    clahe = cv2.createCLAHE(clipLimit=3.0, tileGridSize=(8, 8))
+    enhanced = clahe.apply(gray)
+
+    if enhanced.dtype != np.uint8:
+        enhanced = cv2.normalize(enhanced, None, 0, 255, cv2.NORM_MINMAX).astype(np.uint8)
+
+    illum = cv2.GaussianBlur(enhanced, (61, 61), 0)
+    local = cv2.addWeighted(enhanced, 1.5, illum, -0.5, 0)
+
+    blurred = cv2.GaussianBlur(local, (5, 5), 0)
+
+    if mode == 'auto':
+        block_size = 31
+        c = 2
+    elif mode == 'low':
+        block_size = 51
+        c = -5
+    else:
+        block_size = 31
+        c = 5
+
+    ink_mask = cv2.adaptiveThreshold(
+        blurred,
+        255,
+        cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+        cv2.THRESH_BINARY_INV,
+        block_size,
+        c,
+    )
+
     ink_mask = cv2.bitwise_and(ink_mask, board_mask)
-    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (5, 5))
+    if apriltag_mask is not None:
+        ink_mask = cv2.bitwise_and(ink_mask, cv2.bitwise_not(apriltag_mask))
+
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
     ink_mask = cv2.morphologyEx(ink_mask, cv2.MORPH_OPEN, kernel, iterations=1)
     ink_mask = cv2.morphologyEx(ink_mask, cv2.MORPH_CLOSE, kernel, iterations=1)
+
+    return ink_mask
+
+
+def extract_ink_mask_hsv(frame, board_mask, apriltag_mask=None):
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+    v = hsv[:, :, 2]
+    s = hsv[:, :, 1]
+
+    dark_ink = cv2.inRange(v, 0, 150)
+    saturation_range = cv2.inRange(s, 0, 255)
+    ink_mask = cv2.bitwise_and(dark_ink, saturation_range)
+
+    ink_mask = cv2.GaussianBlur(ink_mask, (3, 3), 0)
+    _, ink_mask = cv2.threshold(ink_mask, 10, 255, cv2.THRESH_BINARY)
+
+    ink_mask = cv2.bitwise_and(ink_mask, board_mask)
+    if apriltag_mask is not None:
+        ink_mask = cv2.bitwise_and(ink_mask, cv2.bitwise_not(apriltag_mask))
+
+    kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (3, 3))
+    ink_mask = cv2.morphologyEx(ink_mask, cv2.MORPH_OPEN, kernel, iterations=1)
+
     return ink_mask
 
 
@@ -65,6 +147,7 @@ class InkDetectionNode(Node):
         self.bridge = CvBridge()
         self.board_homography = None
         self.board_corners = None
+        self.tag_detector = create_apriltag_detector()
 
         self.waypoints_pub = self.create_publisher(PoseArray, '/specs/ink_waypoints', 10)
         self.board_corners_sub = self.create_subscription(
@@ -101,14 +184,50 @@ class InkDetectionNode(Node):
         try:
             frame = self.bridge.imgmsg_to_cv2(msg, desired_encoding='bgr8')
         except Exception as exc:
-            self.get_logger().error(f"Failed to convert image: {exc}")
+            print(f"Failed to convert image: {exc}")
             return
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         board_mask = create_board_mask(gray.shape, self.board_corners)
-        ink_mask = extract_ink_mask(gray, board_mask)
 
-        centroids = find_contour_centroids(ink_mask)
+        detections = None
+        apriltag_mask = np.zeros(gray.shape, dtype=np.uint8)
+        if self.tag_detector is not None:
+            detections = self.tag_detector.detect(gray)
+            apriltag_mask = create_apriltag_exclusion_mask(gray.shape, detections, padding=16)
+
+        print(f'Apriltag detections: {len(detections) if detections is not None else 0}')
+        print(f'Board mask pixels: {np.count_nonzero(board_mask)} Apriltag mask pixels: {np.count_nonzero(apriltag_mask)}')
+
+        board_region = gray[board_mask > 0]
+        if len(board_region) > 0:
+            print(f'Board grayscale range: min={board_region.min()} max={board_region.max()} mean={board_region.mean():.1f}')
+        
+        hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+        board_hsv = hsv[board_mask > 0]
+        if len(board_hsv) > 0:
+            v_vals = board_hsv[:, 2]
+            s_vals = board_hsv[:, 1]
+            print(f'Board HSV V range: min={v_vals.min()} max={v_vals.max()} mean={v_vals.mean():.1f}')
+            print(f'Board HSV S range: min={s_vals.min()} max={s_vals.max()} mean={s_vals.mean():.1f}')
+
+        ink_mask = extract_ink_mask(gray, board_mask, apriltag_mask, mode='auto')
+        centroids = find_contour_centroids(ink_mask, min_area=15)
+        print(f'Auto ink contours: {len(centroids)}, ink mask pixels: {np.count_nonzero(ink_mask)}')
+
+        if len(centroids) == 0:
+            print('No ink contours found: retry low threshold')
+            ink_mask = extract_ink_mask(gray, board_mask, apriltag_mask, mode='low')
+            centroids = find_contour_centroids(ink_mask, min_area=10)
+            print(f'Low ink contours: {len(centroids)}, ink mask pixels: {np.count_nonzero(ink_mask)}')
+
+        if len(centroids) == 0:
+            print('No ink contours found: fallback HSV ink filter')
+            ink_mask = extract_ink_mask_hsv(frame, board_mask, apriltag_mask)
+            centroids = find_contour_centroids(ink_mask, min_area=10)
+            print(f'HSV ink contours: {len(centroids)}, ink mask pixels: {np.count_nonzero(ink_mask)}')
+
+        print(f'Ink detections: {len(centroids)}')
         normalized_points = []
         for cx, cy in centroids:
             pixel_point = np.array([[[float(cx), float(cy)]]], dtype=np.float32)
@@ -117,6 +236,7 @@ class InkDetectionNode(Node):
                 normalized_points.append((float(projected[0]), float(projected[1])))
 
         waypoints = cluster_waypoints(normalized_points)
+        print(f'Waypoints computed: {len(waypoints)} (centroids {len(centroids)}, normalized {len(normalized_points)})')
         self.publish_waypoints(waypoints)
         self.visualize(frame, centroids, waypoints)
 
@@ -146,8 +266,21 @@ class InkDetectionNode(Node):
 
         info = f"Ink marks={len(centroids)} waypoints={len(waypoints)}"
         cv2.putText(overlay, info, (10, frame.shape[0] - 20), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 2)
-        cv2.imshow(WINDOW_NAME, overlay)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+
+        print(f"Visualize: frame shape={frame.shape}, overlay shape={overlay.shape}, centroids={len(centroids)}, waypoints={len(waypoints)}")
+        if overlay is None or overlay.size == 0:
+            print("Visualize overlay is empty or invalid")
+        else:
+            try:
+                cv2.imshow(WINDOW_NAME, overlay)
+            except Exception as e:
+                print(f"cv2.imshow failed: {e}")
+
+        key = cv2.waitKey(1)
+        if key == -1:
+            print("waitKey returned -1")
+        if key & 0xFF == ord('q'):
+            print("Quit key pressed")
             cv2.destroyAllWindows()
             rclpy.shutdown()
 
