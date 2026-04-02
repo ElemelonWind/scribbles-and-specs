@@ -1,10 +1,12 @@
 # specs ROS 2 Package
 
-This package contains three ROS 2 Python nodes that subscribe to `/camera/image_raw` and process camera frames:
+This package contains four ROS 2 Python nodes that subscribe to `/camera/image_raw` and process camera frames:
 
 - `video_display.py` — displays camera frames in grayscale
 - `apriltag_test.py` — detects a single AprilTag and draws the detection
-- `localization.py` — detects AprilTags and localizes a bot relative to board corners
+- `localization.py` — detects AprilTags, localizes a bot relative to board corners, and publishes board state data
+- `ink_detection.py` — detects ink marks inside the board region, computes board-relative normalized waypoints, and publishes them for erasing
+- `socket_test.py` — opens a TCP socket to Scribbles, sends a `ping`, and logs the response
 
 ## Requirements
 
@@ -20,6 +22,7 @@ From the package directory:
 
 ```bash
 cd /home/mbot/scribbles-and-specs/Specs
+chmod +x localization.py ink_detection.py socket_test.py # might need to run
 colcon build --symlink-install
 ```
 
@@ -48,3 +51,5 @@ ros2 run camera_ros camera_node --ros-args -p width:=640 -p height:=480 -p forma
 ```
 
 - Press `q` in the OpenCV window to exit the node.
+
+- The ESP32 creates a hotspot for the socket. While ssh'ed into the pi, you need to run `bash connect-esp32-hotspot.sh` and re-ssh using the new IP displayed on the display.
