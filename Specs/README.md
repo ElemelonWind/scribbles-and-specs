@@ -51,3 +51,5 @@ ros2 run camera_ros camera_node --ros-args -p width:=640 -p height:=480 -p forma
 ```
 
 - Press `q` in the OpenCV window to exit the node.
+
+- The ESP32 creates a hotspot for the socket. While ssh'ed into the pi, you need to run `bash connect-esp32-hotspot.sh` and re-ssh using the new IP displayed on the display.
