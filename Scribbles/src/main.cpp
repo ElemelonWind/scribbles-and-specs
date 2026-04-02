@@ -1,11 +1,11 @@
 ﻿#include <Arduino.h>
 #include <WiFi.h>
 
-#ifndef WIFI_SSID
-#define WIFI_SSID "SSID"
+#ifndef AP_SSID
+#define AP_SSID "ESP32_Hotspot"
 #endif
-#ifndef WIFI_PASSWORD
-#define WIFI_PASSWORD "Password"
+#ifndef AP_PASSWORD
+#define AP_PASSWORD "esp32pass"
 #endif
 
 const uint16_t SERVER_PORT = 3333;
@@ -13,20 +13,21 @@ WiFiServer server(SERVER_PORT);
 WiFiClient client;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(9600);
   delay(1000);
-  Serial.println("Starting WiFi connection...");
-
-  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print('.');
-  }
-
-  Serial.println();
-  Serial.print("Connected to WiFi, IP: ");
-  Serial.println(WiFi.localIP());
-
+  Serial.println("Setting up WiFi Access Point...");
+  
+  // Create WiFi Access Point
+  WiFi.softAP(AP_SSID, AP_PASSWORD);
+  
+  Serial.println("Access Point created!");
+  Serial.print("SSID: ");
+  Serial.println(AP_SSID);
+  Serial.print("Password: ");
+  Serial.println(AP_PASSWORD);
+  Serial.print("AP IP: ");
+  Serial.println(WiFi.softAPIP());
+  
   server.begin();
   Serial.printf("Socket server listening on port %u\n", SERVER_PORT);
 }
