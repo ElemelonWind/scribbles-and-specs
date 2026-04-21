@@ -9,6 +9,7 @@ install(PROGRAMS
   video_display.py
   ink_detection.py
   socket_test.py
+  specs_comms.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

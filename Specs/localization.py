@@ -54,7 +54,7 @@ def get_corner_positions(detections):
     return np.array(ordered, dtype=np.float32)
 
 
-def localize_bot(tag_center, board_corners):
+def localize_bot(bot_detection, board_corners):
     src_pts = board_corners
     dst_pts = np.array([[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]], dtype=np.float32)
 
@@ -62,6 +62,7 @@ def localize_bot(tag_center, board_corners):
     if H is None:
         return None
 
+    tag_center = bot_detection['center']
     pt = np.array([[tag_center]], dtype=np.float32)
     dst = cv2.perspectiveTransform(pt, H)[0][0]
 
@@ -71,9 +72,22 @@ def localize_bot(tag_center, board_corners):
     col = int(x_norm * (GRID_COLS - 1))
     row = int(y_norm * (GRID_ROWS - 1))
 
+    # Heading in the board frame: angle of the tag's "up" direction.
+    # Tag corners are ordered [lb, rb, rt, lt] in 'lb-rb-rt-lt'.
+    # Up vector = midpoint(lt, rt) - midpoint(lb, rb), projected through H.
+    corners = np.array(bot_detection['lb-rb-rt-lt'], dtype=np.float32).reshape(-1, 2)
+    bottom_mid = (corners[0] + corners[1]) / 2.0
+    top_mid = (corners[2] + corners[3]) / 2.0
+    pts_img = np.array([[bottom_mid], [top_mid]], dtype=np.float32)
+    pts_board = cv2.perspectiveTransform(pts_img, H).reshape(-1, 2)
+    up_vec = pts_board[1] - pts_board[0]
+    # Heading: 0° = +y board direction (board "up"), increasing clockwise.
+    heading_deg = (np.degrees(np.arctan2(up_vec[0], -up_vec[1]))) % 360.0
+
     return {
         "x_norm": float(x_norm),
         "y_norm": float(y_norm),
+        "heading_deg": float(heading_deg),
         "row": int(row),
         "col": int(col),
         "grid": (int(row), int(col)),
@@ -109,7 +123,7 @@ def process_frame(frame, detector):
         output["board_corners"] = None
 
     if bot_detection is not None and board_corners is not None:
-        loc = localize_bot(bot_detection['center'], board_corners)
+        loc = localize_bot(bot_detection, board_corners)
         if loc is not None:
             output["bot_location"] = loc
             cv2.putText(frame, f"Grid {loc['row']},{loc['col']}",
@@ -134,6 +148,8 @@ class LocalizationNode(Node):
         self.board_detected_pub = self.create_publisher(Bool, '/specs/board_detected', 10)
         self.board_homography_pub = self.create_publisher(Float32MultiArray, '/specs/board_homography', 10)
         self.board_corners_pub = self.create_publisher(Float32MultiArray, '/specs/board_corners', 10)
+        # Bot pose: [x_norm, y_norm, heading_deg]
+        self.bot_pose_pub = self.create_publisher(Float32MultiArray, '/specs/bot_pose', 10)
 
         self.subscription = self.create_subscription(
             Image,
@@ -165,7 +181,12 @@ class LocalizationNode(Node):
         if output["board_detected"]:
             if output["bot_location"]:
                 loc = output["bot_location"]
-                self.get_logger().info(f"Scribble coordinates: grid={loc['grid']} norm=({loc['x_norm']:.3f},{loc['y_norm']:.3f})")
+                self.bot_pose_pub.publish(
+                    Float32MultiArray(data=[loc['x_norm'], loc['y_norm'], loc['heading_deg']])
+                )
+                self.get_logger().info(
+                    f"Scribble coordinates: grid={loc['grid']} norm=({loc['x_norm']:.3f},{loc['y_norm']:.3f}) heading={loc['heading_deg']:.1f}°"
+                )
             else:
                 self.get_logger().info("Scribble bot tag not detected")
         else:
