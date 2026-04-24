@@ -20,7 +20,8 @@ float PID_FF::update(float setpoint, float measurement) {
 
     // Serial.println("Error: " + String(error) + ", Integral: " + String(integral) + ", Derivative: " + String(derivative));
 
-    float ff_term = m * setpoint + b;
+    float ff_term = m * abs(setpoint) + b;
+    if (setpoint < 0) ff_term = -ff_term; // Preserve direction for feedforward term
     float u = ff_term + kp * error + ki * integral + kd * derivative;
     // Serial.println("Control Output (u): " + String(u));
     return u;

@@ -1,11 +1,12 @@
 #pragma once
 #include <cmath>
+#include <Arduino.h>
 
 struct WheelCommand {
     float u0, u1, u2;
 };
 
-class PurePursuitController {
+class LookaheadController {
 
     // For the current path
     float start_x, start_y;
@@ -17,11 +18,13 @@ class PurePursuitController {
 
     // Parameters
     float lookahead_distance = 0.1; // meters
+    float speed = 0.5f;
+    float r = 0.02f; // wheel radius
 
     void calcLookaheadPoint(float curr_x, float curr_y, float& lookahead_x, float& lookahead_y);
 
 public:
-    PurePursuitController();
+    LookaheadController();
 
     void updatePath(float start_x, float start_y, float end_x, float end_y);
 

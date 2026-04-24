@@ -4,62 +4,173 @@
 #include "PID_FF.hpp"
 #include "WheelSpeed.hpp"
 #include "ESP32_PWM.h"
+#include "PathFollowing.hpp"
+#include "soc/soc.h"
+#include "soc/rtc_cntl_reg.h"
+#include <WiFi.h>
 
-int cnt = 0;
+#ifndef AP_SSID
+#define AP_SSID "ESP32_Hotspot"
+#endif
+#ifndef AP_PASSWORD
+#define AP_PASSWORD "esp32pass"
+#endif
 
-HBridgeMotor motor0(27, 25, 26);
-HBridgeMotor motor1(13, 12, 23);
-HBridgeMotor motor2(32, 33, 18);
+const uint16_t SERVER_PORT = 3333;
+WiFiServer server(SERVER_PORT);
+WiFiClient client;
 
-PID_FF pid0(0.08929, 0.0188, 0.02, 0.1, 0.002);
-PID_FF pid1(0.08105, 0.02559, 0.02, 0.1, 0.002);
-PID_FF pid2(0.08084, 0.02601, 0.02, 0.1, 0.002);
 
+HBridgeMotor motor2(23, 22, 21 );
+HBridgeMotor motor1( 14, 13, 4);
+HBridgeMotor motor0(26, 25, 27);
 
 WheelSpeed wheelSpeed0;
 WheelSpeed wheelSpeed1;
 WheelSpeed wheelSpeed2;
 
+PID_FF pid0(0.08929, 0.0188, 0.01, 0.1, 0.001); //  0.02, 0.1, 0.002
+PID_FF pid1(0.08105, 0.02559, 0.01, 0.1, 0.001);
+PID_FF pid2(0.08084, 0.02601, 0.01, 0.1, 0.001);
+
+LookaheadController lookaheadController;
+
+WheelCommand wheel_speed_cmd;
+
+constexpr float INCH_TO_METER = 0.0254f;
+constexpr float whiteboard_width = 45.0f * INCH_TO_METER;
+constexpr float whiteboard_height = 29.0f * INCH_TO_METER;
+
+// Latest state parsed from Specs.
+struct Pose {
+  bool valid;
+  float x;          // 45 inch grid
+  float y;          // 29 inch grid
+  float heading;   // 0-359 degrees (decoded from 7-bit)
+};
+
+Pose bot_loc = {false, 0, 0, 0};
+Pose current_wp = {false, 0, 0, 0};
+
+// Decode 3-byte message:
+//   byte[0]: bit7 = type (0=location, 1=waypoint), bits6..0 = heading_7bit
+//   byte[1]: x (0-255)
+//   byte[2]: y (0-255)
+
+#define WAYPOINT_MSG_TYPE 1
+#define LOCATION_MSG_TYPE 2
+int handle_packet(const uint8_t buf[3]) {
+  uint8_t msg_type = (buf[0] >> 7) & 0x01;
+  uint8_t heading_7bit = buf[0] & 0x7F;
+  float heading_deg = (float)(((uint32_t)heading_7bit * 360UL) / 128.0f);
+  uint8_t x = buf[1];
+  uint8_t y = buf[2];
+
+  // Convert grid coordinates to meters
+  float x_m = (float)x * whiteboard_width / 255.0f;
+  float y_m = (float)y * whiteboard_height / 255.0f;
+
+  if (msg_type == 0) {
+    bot_loc = {true, x_m, y_m, heading_deg};
+    Serial.printf("LOC  x=%3f y=%3f h=%3f\n", x_m, y_m, heading_deg);
+    return LOCATION_MSG_TYPE;
+  } else {
+    current_wp = {true, x_m, y_m, heading_deg};
+    Serial.printf("WP   x=%3f y=%3f h=%3f\n", x_m, y_m, heading_deg);
+    return WAYPOINT_MSG_TYPE;
+  }
+  return 0;
+}
+
 float targetSpeed = 0.5f;
 
 
 void setup() {
+  // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable brownout detector
 
-  wheelSpeed0 = WheelSpeed(4, 5);
-  wheelSpeed1 = WheelSpeed(21, 22);
-  wheelSpeed2 = WheelSpeed(14, 19);
+  wheelSpeed2 = WheelSpeed(18, 19);
+  wheelSpeed1 = WheelSpeed(35, 34);
+  wheelSpeed0 = WheelSpeed(36, 39);
 
   Serial.begin(115200);
   Serial1.begin(115200, SERIAL_8N1, 16, 17);
+
+  Serial.println("Setting up WiFi Access Point...");
+
+  WiFi.softAP(AP_SSID, AP_PASSWORD);
+
+  Serial.println("Access Point created!");
+  Serial.print("SSID: ");
+  Serial.println(AP_SSID);
+  Serial.print("Password: ");
+  Serial.println(AP_PASSWORD);
+  Serial.print("AP IP: ");
+  Serial.println(WiFi.softAPIP());
+
+  server.begin();
+  Serial.printf("Socket server listening on port %u\n", SERVER_PORT);
+}
+
+float clamp(float val, float min_val, float max_val) {
+  return (val < min_val) ? min_val : (val > max_val) ? max_val : val;
+}
+
+void driveMotor(HBridgeMotor& motor, float speed_cmd) {
+  if (abs(speed_cmd) < 0.005f) {
+    motor.stop();
+  } else {
+    motor.set(clamp(abs(speed_cmd), 0.0f, 0.2f), speed_cmd >= 0.0f);
+  }
 }
 
 void loop() {
-  // Encoder - PID_FF test
 
-  if (cnt > 25) {
-    motor0.stop();
-    motor1.stop();
-    motor2.stop();
-    return;
+  
+  if (!client || !client.connected()) {
+    client = server.available();
+    if (client) {
+      Serial.println("Client connected");
+    }
   }
-  cnt++;
+
+  if (client && client.connected()) {
+    // Read 3-byte packets as they arrive.
+    while (client.available() >= 3) {
+      uint8_t buf[3];
+      size_t n = client.readBytes(buf, 3);
+      if (n == 3) {
+        int msg_type = handle_packet(buf);
+
+        if (msg_type == WAYPOINT_MSG_TYPE && bot_loc.valid) {
+          // Update lookahead controller with new waypoint and compute command.
+          lookaheadController.updatePath(bot_loc.x, bot_loc.y, current_wp.x, current_wp.y);
+          wheel_speed_cmd = lookaheadController.command(bot_loc.x, bot_loc.y, bot_loc.heading);
+        }
+        else if (msg_type == LOCATION_MSG_TYPE) {
+          // Update lookahead controller with new location and compute command.
+          if (current_wp.valid) {
+            wheel_speed_cmd = lookaheadController.command(bot_loc.x, bot_loc.y, bot_loc.heading);
+            Serial.printf("CMD  u0=%f u1=%f u2=%f\n", wheel_speed_cmd.u0, wheel_speed_cmd.u1, wheel_speed_cmd.u2);
+          }
+        }
+      }
+    }
+  }
 
   float wheel0Speed = wheelSpeed0.calculateSpeed();
   float wheel1Speed = wheelSpeed1.calculateSpeed();
   float wheel2Speed = wheelSpeed2.calculateSpeed();
+  // Serial.printf("SPEED wheel0=%f wheel1=%f wheel2=%f\n", wheel0Speed, wheel1Speed, wheel2Speed);
 
-  float motor0Output = pid0.update(targetSpeed, wheel0Speed);
-  float motor1Output = pid1.update(targetSpeed, wheel1Speed);
-  float motor2Output = pid2.update(targetSpeed, wheel2Speed);
+  float motor0Output = pid0.update(wheel_speed_cmd.u0, wheel0Speed);
+  float motor1Output = pid1.update(wheel_speed_cmd.u1, wheel1Speed);
+  float motor2Output = pid2.update(wheel_speed_cmd.u2, wheel2Speed);
 
-  if (abs(motor0Output) < 0.05f) motor0.stop();
-  else motor0.set(abs(motor0Output), motor0Output >= 0.0f);
+  // Serial.printf("Driving motors with outputs: %f, %f, %f\n", motor0Output, motor1Output, motor2Output);
 
-  if (abs(motor1Output) < 0.05f) motor1.stop();
-  else motor1.set(abs(motor1Output), motor1Output >= 0.0f);
-
-  if (abs(motor2Output) < 0.05f) motor2.stop();
-  else motor2.set(abs(motor2Output), motor2Output >= 0.0f);
+  driveMotor(motor0, motor0Output);
+  driveMotor(motor1, motor1Output);
+  driveMotor(motor2, motor2Output);
 
   delay(200);
 }
