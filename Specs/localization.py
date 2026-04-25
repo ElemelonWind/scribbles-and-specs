@@ -18,8 +18,8 @@ CORNER_TAG_SIZE_M = 0.100  # meters (adjust to real tag size)
 BOT_TAG_SIZE_M = 0.050
 
 # Grid resolution on whiteboard
-GRID_ROWS = 10
-GRID_COLS = 10
+GRID_ROWS = 255
+GRID_COLS = 255
 
 
 def create_detector():
@@ -66,8 +66,10 @@ def localize_bot(bot_detection, board_corners):
     pt = np.array([[tag_center]], dtype=np.float32)
     dst = cv2.perspectiveTransform(pt, H)[0][0]
 
-    x_norm = np.clip(dst[0], 0.0, 1.0)
-    y_norm = np.clip(dst[1], 0.0, 1.0)
+    # Swap so the published x = "across the board" and y = "down the board"
+    # matches the user's expected orientation.
+    x_norm = np.clip(dst[1], 0.0, 1.0)
+    y_norm = np.clip(dst[0], 0.0, 1.0)
 
     col = int(x_norm * (GRID_COLS - 1))
     row = int(y_norm * (GRID_ROWS - 1))
@@ -80,9 +82,12 @@ def localize_bot(bot_detection, board_corners):
     top_mid = (corners[2] + corners[3]) / 2.0
     pts_img = np.array([[bottom_mid], [top_mid]], dtype=np.float32)
     pts_board = cv2.perspectiveTransform(pts_img, H).reshape(-1, 2)
-    up_vec = pts_board[1] - pts_board[0]
-    # Heading: 0° = +y board direction (board "up"), increasing clockwise.
-    heading_deg = (np.degrees(np.arctan2(up_vec[0], -up_vec[1]))) % 360.0
+    # pts_board components are (across, down); swap to match the published
+    # (x=across, y=down) convention before computing the heading.
+    up_vec_x = pts_board[1][1] - pts_board[0][1]
+    up_vec_y = pts_board[1][0] - pts_board[0][0]
+    # Heading: 0° = -y board direction (board "up"), increasing clockwise.
+    heading_deg = (np.degrees(np.arctan2(up_vec_x, -up_vec_y))) % 360.0
 
     return {
         "x_norm": float(x_norm),
