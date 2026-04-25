@@ -10,6 +10,7 @@ install(PROGRAMS
   ink_detection.py
   socket_test.py
   specs_comms.py
+  draw_waypoints.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

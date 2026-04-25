@@ -70,6 +70,8 @@ class SpecsCommsNode(Node):
         self.bot_pose = None             # (x_norm, y_norm, heading_deg)
         self.waypoints = []              # list of (x_norm, y_norm)
         self.current_wp_idx = 0
+        self.loc_count = 0
+        self.loc_log_every = 30          # info-log every Nth LOC packet
 
         self.bot_pose_sub = self.create_subscription(
             Float32MultiArray, '/specs/bot_pose', self.bot_pose_callback, 10
@@ -120,6 +122,7 @@ class SpecsCommsNode(Node):
 
     def bot_pose_callback(self, msg: Float32MultiArray):
         if len(msg.data) < 3:
+            self.get_logger().warning(f"bot_pose msg has {len(msg.data)} fields, expected 3")
             return
         x_norm, y_norm, heading_deg = float(msg.data[0]), float(msg.data[1]), float(msg.data[2])
         self.bot_pose = (x_norm, y_norm, heading_deg)
@@ -127,9 +130,12 @@ class SpecsCommsNode(Node):
         packet = encode_message(
             LOCATION_TYPE, heading_deg, norm_to_grid(x_norm), norm_to_grid(y_norm)
         )
-        if self.send_packet(packet):
-            self.get_logger().debug(
-                f"LOC → x={norm_to_grid(x_norm)} y={norm_to_grid(y_norm)} h={heading_deg:.1f}°"
+        sent = self.send_packet(packet)
+        self.loc_count += 1
+        if sent and (self.loc_count == 1 or self.loc_count % self.loc_log_every == 0):
+            self.get_logger().info(
+                f"LOC #{self.loc_count} → x={norm_to_grid(x_norm)} "
+                f"y={norm_to_grid(y_norm)} h={heading_deg:.1f}°"
             )
 
         self.maybe_advance_waypoint()

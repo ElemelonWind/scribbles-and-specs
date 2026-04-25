@@ -7,6 +7,7 @@ This package contains ROS 2 Python nodes that subscribe to `/camera/image_raw` a
 - `localization.py` — detects AprilTags, localizes the bot, publishes `/specs/board_*` and `/specs/bot_pose`
 - `ink_detection.py` — detects ink marks inside the board region and publishes `/specs/ink_waypoints`
 - `ink_detection_test.py` — standalone (non-ROS) test harness for the ink detection pipeline on a single image
+- `draw_waypoints.py` — drop-in replacement for `ink_detection.py` for "always-drawing marker" mode; publishes a fixed shape (square / circle / star / …) as a single continuous waypoint path
 - `socket_test.py` — opens a TCP socket to Scribbles, sends a `ping`, and logs the response
 - `specs_comms.py` — subscribes to `/specs/bot_pose` + `/specs/ink_waypoints` and sends 3-byte packets to the ESP32
 
@@ -53,8 +54,15 @@ ros2 run camera_ros camera_node --ros-args -p width:=640 -p height:=480 -p forma
 # 2. Localization (publishes /specs/bot_pose and /specs/board_*)
 ros2 run specs localization.py
 
-# 3. Ink detection (publishes /specs/ink_waypoints)
+# 3. Waypoint source — pick ONE of the following:
+
+# 3a. Erase mode: detect existing ink marks and erase them
 ros2 run specs ink_detection.py
+
+# 3b. Draw mode: trace a fixed shape with the marker (always touching the board)
+ros2 run specs draw_waypoints.py \
+    --ros-args -p shape:=square -p center_x:=0.5 -p center_y:=0.5 -p size:=0.3
+# Other shapes: triangle, circle, star, line, zigzag
 
 # 4. Comms bridge (forwards to the ESP32)
 ros2 run specs specs_comms.py \
