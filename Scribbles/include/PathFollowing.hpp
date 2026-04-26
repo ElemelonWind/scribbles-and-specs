@@ -17,11 +17,11 @@ class LookaheadController {
     float dx, dy;
 
     // Parameters
-    float lookahead_distance = 0.1; // meters
-    float speed = 0.5f;
-    float r = 0.02f; // wheel radius
+    const float lookahead_distance = 0.1; // meters
+    const float speed = 0.5f;
+    const float r = 0.02f; // wheel radius
 
-    float kp_w = 0.05;
+    const float kp_w = 0.05;
 
     void calcLookaheadPoint(float curr_x, float curr_y, float& lookahead_x, float& lookahead_y);
 

@@ -37,8 +37,15 @@ WheelCommand LookaheadController::command(float curr_x, float curr_y, float curr
 
 
     float mod_vel = sqrt(vel_x_global * vel_x_global + vel_y_global * vel_y_global);
-    vel_x_global = (vel_x_global / mod_vel) * speed;
-    vel_y_global = (vel_y_global / mod_vel) * speed;
+
+    float adj_speed = speed;
+    float dist_to_end = sqrt((end_x - curr_x) * (end_x - curr_x) + (end_y - curr_y) * (end_y - curr_y));
+    if (dist_to_end < 0.05) {
+        adj_speed = (dist_to_end / 0.05) * speed;
+    }
+
+    vel_x_global = (vel_x_global / mod_vel) * adj_speed;
+    vel_y_global = (vel_y_global / mod_vel) * adj_speed;
 
     // Convert global velocities to robot frame
     float vel_x = cos(curr_theta) * vel_x_global - sin(curr_theta) * vel_y_global;

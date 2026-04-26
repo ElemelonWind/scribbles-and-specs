@@ -67,7 +67,7 @@ int handle_packet(const uint8_t buf[3])
   uint8_t x = buf[1];
   uint8_t y = buf[2];
 
-  if (buf[0] == 0xFF && buf[1] == 0xFF && buf[2] == 0xFF)
+  if (x == 255 && y == 255)
   {
     // Special message to reset bot location.
     bot_loc = {false, 0, 0, 0};
