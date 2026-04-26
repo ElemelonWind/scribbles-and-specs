@@ -34,6 +34,13 @@ CORNER_EXCLUSION_IN = 15
 # casts often look like ink to the LAB-deviation detector).
 BOT_EXCLUSION_IN = 8.0
 
+# Keep the bot's tag at least this many inches away from each board edge
+# (i.e., away from the corner AprilTags). All published waypoints — sweep
+# and detected — are clamped into the inset rectangle:
+#   x ∈ [INSET_IN, BOARD_WIDTH_IN  - INSET_IN]
+#   y ∈ [INSET_IN, BOARD_HEIGHT_IN - INSET_IN]
+INSET_IN = 6.0
+
 
 # ── Ink detection (LAB background subtraction) ──────────────────────────────
 
@@ -132,31 +139,6 @@ def create_corner_exclusion_mask(size=BOARD_SIZE,
     return mask
 
 
-def generate_sweep_waypoints(num_rows=6, x_margin_in=2.0, y_margin_in=1.0):
-    """Build a serpentine sweep over the eraser-reachable area.
-
-    The eraser sits 4.5" above the AprilTag, so the eraser can only reach
-    y ∈ [0, BOARD_HEIGHT - 4.5]. Tag waypoints are emitted directly (no
-    eraser offset added downstream — these are TAG targets).
-    """
-    er_y_min = y_margin_in
-    er_y_max = BOARD_HEIGHT_IN - ERASER_OFFSET_IN - y_margin_in
-    x_min = x_margin_in
-    x_max = BOARD_WIDTH_IN - x_margin_in
-
-    waypoints = []
-    for i in range(num_rows):
-        if num_rows == 1:
-            er_y = (er_y_min + er_y_max) / 2.0
-        else:
-            er_y = er_y_min + i * (er_y_max - er_y_min) / (num_rows - 1)
-        tag_y = er_y + ERASER_OFFSET_IN
-        xs = [x_min, x_max] if i % 2 == 0 else [x_max, x_min]
-        for x in xs:
-            waypoints.append((x / BOARD_WIDTH_IN, tag_y / BOARD_HEIGHT_IN))
-    return waypoints
-
-
 def add_bot_exclusion(mask, bot_pose, size=BOARD_SIZE,
                        exclusion_in=BOT_EXCLUSION_IN,
                        board_w_in=BOARD_WIDTH_IN,
@@ -223,11 +205,6 @@ def create_apriltag_exclusion_mask(size, detections, corners, padding=16):
 # ── ROS node ─────────────────────────────────────────────────────────────────
 
 class InkDetectionNode(Node):
-    STATE_SWEEP_1 = 'sweep_1'
-    STATE_DETECT  = 'detect'
-    STATE_SWEEP_2 = 'sweep_2'
-    STATE_DONE    = 'done'
-
     def __init__(self):
         super().__init__('ink_detection')
         self.bridge = CvBridge()
@@ -237,19 +214,6 @@ class InkDetectionNode(Node):
         # Static corner-exclusion mask in warped board space (cached once).
         self.corner_mask = create_corner_exclusion_mask()
 
-        # ── Tunables ──────────────────────────────────────────────────────
-        self.declare_parameter('sweep_duration_s', 60.0)
-        self.declare_parameter('detect_duration_s', 30.0)
-        self.declare_parameter('sweep_rows', 6)
-        self.sweep_duration_s = self.get_parameter('sweep_duration_s') \
-            .get_parameter_value().double_value
-        self.detect_duration_s = self.get_parameter('detect_duration_s') \
-            .get_parameter_value().double_value
-        sweep_rows = self.get_parameter('sweep_rows') \
-            .get_parameter_value().integer_value
-        self.sweep_waypoints = generate_sweep_waypoints(num_rows=sweep_rows)
-
-        # ── ROS comms ─────────────────────────────────────────────────────
         self.waypoints_pub = self.create_publisher(PoseArray, '/specs/ink_waypoints', 10)
         self.board_corners_sub = self.create_subscription(
             Float32MultiArray, '/specs/board_corners',
@@ -261,18 +225,6 @@ class InkDetectionNode(Node):
             Image, '/camera/image_raw',
             self.image_callback, 10)
 
-        # ── State machine ─────────────────────────────────────────────────
-        self.state = self.STATE_SWEEP_1
-        self.state_start = self.get_clock().now()
-        self._publish_waypoints(self.sweep_waypoints, apply_eraser_offset=False)
-        self.get_logger().info(
-            f"State → {self.state}: {len(self.sweep_waypoints)} sweep waypoints "
-            f"(duration={self.sweep_duration_s}s, then {self.detect_duration_s}s detect)"
-        )
-        # Tick at 1 Hz to advance state; re-broadcasts sweep on the same tick
-        # for robustness in case the first publish was missed.
-        self.state_timer = self.create_timer(1.0, self._state_tick)
-
     def board_corners_callback(self, msg):
         if len(msg.data) == 8:
             self.board_corners = np.array(msg.data, dtype=np.float32).reshape(4, 2)
@@ -280,29 +232,6 @@ class InkDetectionNode(Node):
     def bot_pose_callback(self, msg):
         if len(msg.data) >= 2:
             self.bot_pose = (float(msg.data[0]), float(msg.data[1]))
-
-    # ── State machine helpers ────────────────────────────────────────────
-
-    def _elapsed_in_state(self):
-        return (self.get_clock().now() - self.state_start).nanoseconds / 1e9
-
-    def _enter_state(self, new_state):
-        self.get_logger().info(f"State {self.state} → {new_state}")
-        self.state = new_state
-        self.state_start = self.get_clock().now()
-        if new_state == self.STATE_SWEEP_2:
-            self._publish_waypoints(self.sweep_waypoints, apply_eraser_offset=False)
-        elif new_state == self.STATE_DONE:
-            self._publish_waypoints([], apply_eraser_offset=False)
-
-    def _state_tick(self):
-        elapsed = self._elapsed_in_state()
-        if self.state == self.STATE_SWEEP_1 and elapsed >= self.sweep_duration_s:
-            self._enter_state(self.STATE_DETECT)
-        elif self.state == self.STATE_DETECT and elapsed >= self.detect_duration_s:
-            self._enter_state(self.STATE_SWEEP_2)
-        elif self.state == self.STATE_SWEEP_2 and elapsed >= self.sweep_duration_s:
-            self._enter_state(self.STATE_DONE)
 
     def image_callback(self, msg):
         if self.board_corners is None:
@@ -339,35 +268,32 @@ class InkDetectionNode(Node):
         waypoints = cluster_to_waypoints(centroids)
 
         self.get_logger().info(
-            f'state={self.state} marks={len(centroids)} '
-            f'waypoints={len(waypoints)}'
-        )
+            f'marks={len(centroids)} waypoints={len(waypoints)}')
 
-        # Only the DETECT stage drives the bot from the ink-detector output.
-        # SWEEP stages publish their hardcoded waypoints from the state
-        # machine; ink detection still runs there for visualization only.
-        if self.state == self.STATE_DETECT:
-            self._publish_waypoints(waypoints, apply_eraser_offset=True)
-
+        self.publish_waypoints(waypoints)
         self.visualize(frame, centroids, M)
 
-    def _publish_waypoints(self, waypoints, apply_eraser_offset):
-        """Publish a list of (x_norm, y_norm) waypoints.
-
-        If `apply_eraser_offset` is True, each waypoint's y is shifted by
-        +ERASER_OFFSET_Y so the eraser (mounted 4.5" above the tag) lands
-        on the original point. Use False when the waypoints are already
-        TAG-frame targets (e.g. the hardcoded sweep pattern).
-        """
+    def publish_waypoints(self, waypoints):
         pose_array = PoseArray()
         pose_array.header.stamp = self.get_clock().now().to_msg()
         pose_array.header.frame_id = 'camera'
+
+        # Inset rectangle that the bot's TAG is constrained to. Anything
+        # outside this rectangle is too close to a corner AprilTag.
+        inset_x = INSET_IN / BOARD_WIDTH_IN
+        inset_y = INSET_IN / BOARD_HEIGHT_IN
+        x_lo, x_hi = inset_x, 1.0 - inset_x
+        y_lo, y_hi = inset_y, 1.0 - inset_y
+
         for x_norm, y_norm in waypoints:
-            y_out = y_norm + ERASER_OFFSET_Y if apply_eraser_offset else y_norm
-            y_out = max(0.0, min(1.0, y_out))
+            # Shift y so the eraser (4.5" above the tag) lands on the ink
+            # mark, then clamp the tag target into the inset rectangle so
+            # it stays clear of the corner AprilTags.
+            x_tag = max(x_lo, min(x_hi, x_norm))
+            y_tag = max(y_lo, min(y_hi, y_norm + ERASER_OFFSET_Y))
             pose = Pose()
-            pose.position.x = float(x_norm)
-            pose.position.y = float(y_out)
+            pose.position.x = float(x_tag)
+            pose.position.y = float(y_tag)
             pose.position.z = 0.0
             pose_array.poses.append(pose)
         self.waypoints_pub.publish(pose_array)
@@ -379,18 +305,6 @@ class InkDetectionNode(Node):
             cv2.circle(overlay, (cx, cy), 5, (0, 0, 255), -1)
         if self.board_corners is not None:
             cv2.polylines(overlay, [np.int32(self.board_corners)], True, (0, 255, 255), 2)
-
-        elapsed = self._elapsed_in_state()
-        if self.state in (self.STATE_SWEEP_1, self.STATE_SWEEP_2):
-            total = self.sweep_duration_s
-        elif self.state == self.STATE_DETECT:
-            total = self.detect_duration_s
-        else:
-            total = 0.0
-        state_line = f"state={self.state}  t={elapsed:.1f}/{total:.0f}s"
-        cv2.putText(overlay, state_line, (10, 25),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
-
         info = f"marks={len(centroids)}"
         cv2.putText(overlay, info, (10, frame.shape[0] - 15),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
