@@ -125,6 +125,11 @@ class DrawWaypointsNode(Node):
             p.position.y = float(y)
             p.position.z = 0.0
             msg.poses.append(p)
+        stop_p = Pose()
+        stop_p.position.x = 1.0
+        stop_p.position.y = 1.0
+        stop_p.position.z = 1.0
+        msg.poses.append(stop_p)
         self.pub.publish(msg)
 
 

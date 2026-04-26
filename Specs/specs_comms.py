@@ -125,6 +125,7 @@ class SpecsCommsNode(Node):
             self.get_logger().warning(f"bot_pose msg has {len(msg.data)} fields, expected 3")
             return
         x_norm, y_norm, heading_deg = float(msg.data[0]), float(msg.data[1]), float(msg.data[2])
+#        self.get_logger().info(f"in bot_pose_callback {x_norm} {y_norm} {heading_deg}")
         self.bot_pose = (x_norm, y_norm, heading_deg)
 
         packet = encode_message(

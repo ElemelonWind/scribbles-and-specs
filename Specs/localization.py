@@ -66,13 +66,10 @@ def localize_bot(bot_detection, board_corners):
     pt = np.array([[tag_center]], dtype=np.float32)
     dst = cv2.perspectiveTransform(pt, H)[0][0]
 
-    # The physical tag arrangement is rotated relative to the labels in
-    # BOARD_CORNER_TAG_IDS, so the homography output components are
-    # (down, across). Swap so the published convention is x = across
-    # (TL→TR direction) and y = down (TL→BL direction), matching
-    # image_waypoints.py and the ESP32.
-    x_norm = np.clip(dst[1], 0.0, 1.0)
-    y_norm = np.clip(dst[0], 0.0, 1.0)
+    # Swap so the published x = "across the board" and y = "down the board"
+    # matches the user's expected orientation.
+    x_norm = np.clip(dst[0], 0.0, 1.0)
+    y_norm = np.clip(dst[1], 0.0, 1.0)
 
     col = int(x_norm * (GRID_COLS - 1))
     row = int(y_norm * (GRID_ROWS - 1))
@@ -159,13 +156,15 @@ class LocalizationNode(Node):
         # Bot pose: [x_norm, y_norm, heading_deg]
         self.bot_pose_pub = self.create_publisher(Float32MultiArray, '/specs/bot_pose', 10)
 
+        # Parameter to control whether to display the localization image
+        self.show_localization = self.declare_parameter('show_localization', True).value
+
         self.subscription = self.create_subscription(
             Image,
             '/camera/image_raw',
             self.image_callback,
             10
         )
-        self.subscription
 
     def image_callback(self, msg):
         try:
@@ -200,10 +199,11 @@ class LocalizationNode(Node):
         else:
             self.get_logger().info("Board corner tags not fully detected")
 
-        cv2.imshow(WINDOW_NAME, frame)
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-            cv2.destroyAllWindows()
-            rclpy.shutdown()
+        if self.show_localization:
+            cv2.imshow(WINDOW_NAME, frame)
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                cv2.destroyAllWindows()
+                rclpy.shutdown()
 
 
 def main(args=None):
