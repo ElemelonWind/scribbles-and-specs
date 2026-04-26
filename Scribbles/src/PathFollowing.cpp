@@ -23,27 +23,31 @@ WheelCommand LookaheadController::command(float curr_x, float curr_y, float curr
     float lookahead_x, lookahead_y;
     calcLookaheadPoint(curr_x, curr_y, lookahead_x, lookahead_y);
 
+    while (curr_theta < -M_PI) curr_theta += 2 * M_PI;
+    while (curr_theta > M_PI) curr_theta -= 2 * M_PI;
+
     float desired_theta = 0;
     float error_theta = desired_theta - curr_theta;
 
-    // Normalize error to [-pi, pi]
-    while (error_theta > M_PI) error_theta -= 2 * M_PI;
-    while (error_theta < -M_PI) error_theta += 2 * M_PI;
 
-    float vel_x, vel_y, w;
-    vel_x = lookahead_x - curr_x;
-    vel_y = lookahead_y - curr_y;
+    float vel_x_global, vel_y_global, w;
+    vel_x_global = lookahead_x - curr_x;
+    vel_y_global = lookahead_y - curr_y;
     w = error_theta;
 
 
-    float mod_vel = sqrt(vel_x * vel_x + vel_y * vel_y);
-    vel_x = (vel_x / mod_vel) * speed;
-    vel_y = (vel_y / mod_vel) * speed;
+    float mod_vel = sqrt(vel_x_global * vel_x_global + vel_y_global * vel_y_global);
+    vel_x_global = (vel_x_global / mod_vel) * speed;
+    vel_y_global = (vel_y_global / mod_vel) * speed;
+
+    // Convert global velocities to robot frame
+    float vel_x = cos(curr_theta) * vel_x_global - sin(curr_theta) * vel_y_global;
+    float vel_y = sin(curr_theta) * vel_x_global + cos(curr_theta) * vel_y_global;
     w = 0.1 * w;
 
     float u0 = (1/r) * d * w + vel_x;
-    float u1 = (1/r) * d * w - 0.5f * vel_x - (sqrt(3) / 2) * vel_y;
-    float u2 = (1/r) * d * w - 0.5f * vel_x + (sqrt(3) / 2) * vel_y;
+    float u1 = (1/r) * d * w - 0.5f * vel_x + (sqrt(3) / 2) * vel_y;
+    float u2 = (1/r) * d * w - 0.5f * vel_x - (sqrt(3) / 2) * vel_y;
     return {u0, u1, u2};
 
 }
