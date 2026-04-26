@@ -13,6 +13,14 @@ WINDOW_NAME = "Specs Ink Detection"
 BOARD_SIZE = 800
 GRID = 10
 
+# Eraser sits 4.5 inches "above" the AprilTag (in the tag's up direction).
+# Assuming the bot faces up the board (heading ≈ 0°) when erasing, the tag
+# must be that far below the ink mark for the eraser to land on it. Shift
+# each waypoint by +ERASER_OFFSET_Y in normalized board coords (y = down).
+BOARD_HEIGHT_IN = 29.0
+ERASER_OFFSET_IN = 4.5
+ERASER_OFFSET_Y = ERASER_OFFSET_IN / BOARD_HEIGHT_IN  # ≈ 0.155
+
 
 # ── Ink detection (LAB background subtraction) ──────────────────────────────
 
@@ -180,9 +188,13 @@ class InkDetectionNode(Node):
         pose_array.header.stamp = self.get_clock().now().to_msg()
         pose_array.header.frame_id = 'camera'
         for x_norm, y_norm in waypoints:
+            # Shift the waypoint so the eraser (4.5" above the tag) lands on
+            # the ink mark. Assumes the bot drives with heading ≈ 0° (facing
+            # up the board) — see ERASER_OFFSET_Y comment.
+            y_shifted = max(0.0, min(1.0, y_norm + ERASER_OFFSET_Y))
             pose = Pose()
             pose.position.x = x_norm
-            pose.position.y = y_norm
+            pose.position.y = y_shifted
             pose.position.z = 0.0
             pose_array.poses.append(pose)
         self.waypoints_pub.publish(pose_array)
