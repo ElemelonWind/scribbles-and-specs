@@ -61,13 +61,13 @@ ros2 run specs ink_detection.py
 
 # 3b. Draw mode: trace a fixed shape with the marker (always touching the board)
 ros2 run specs draw_waypoints.py \
-    --ros-args -p shape:=square -p center_x:=0.5 -p center_y:=0.5 -p size:=0.3
+    --ros-args -p shape:=square -p center_x:=0.5 -p center_y:=0.5 -p size:=0.2
 # Other shapes: triangle, circle, star, line, zigzag
 
 # 4. Comms bridge (forwards to the ESP32)
 ros2 run specs specs_comms.py \
     --ros-args -p host:=192.168.4.1 -p port:=3333 \
-                -p board_size_m:=1.0 -p error_bound_m:=0.05 \
+                -p board_size_m:=1.0 -p error_bound_m:=0.07 \
                 -p waypoint_period_s:=2.0
 ```
 
