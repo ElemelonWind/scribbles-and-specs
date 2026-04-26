@@ -75,6 +75,29 @@ def extract_path(image_path, simplify_eps=2.0, invert='auto', preview_path=''):
     return pts, w, h, len(contours)
 
 
+# ── Resample a polyline to uniform arc-length spacing ──────────────────────
+
+def resample_uniform(pts, spacing_norm):
+    """Resample a closed polyline (in normalized [0,1] coords) so that
+    consecutive points are roughly `spacing_norm` apart in normalized units.
+    Returns at least 2 points; preserves the start point and closing edge.
+    """
+    if spacing_norm <= 0 or len(pts) < 2:
+        return pts
+    diffs = np.diff(pts, axis=0)
+    seg_lens = np.linalg.norm(diffs, axis=1)
+    cum = np.concatenate([[0.0], np.cumsum(seg_lens)])
+    total = cum[-1]
+    if total == 0:
+        return pts
+    n = max(2, int(round(total / spacing_norm)))
+    new_dists = np.linspace(0.0, total, n)
+    new_pts = np.empty((n, 2), dtype=pts.dtype)
+    for i in range(2):
+        new_pts[:, i] = np.interp(new_dists, cum, pts[:, i])
+    return new_pts
+
+
 # ── Pixel coords → normalized board coords (aspect-preserving) ──────────────
 
 def pixels_to_normalized(pts_px, img_w, img_h, max_frac=0.8):
@@ -110,6 +133,7 @@ class ImageWaypointsNode(Node):
         self.declare_parameter('image', '')
         self.declare_parameter('max_frac', 0.8)
         self.declare_parameter('simplify_eps', 2.0)
+        self.declare_parameter('resample_spacing', 0.05)   # normalized; 0 disables
         self.declare_parameter('invert', 'auto')
         self.declare_parameter('preview', '')
         self.declare_parameter('republish_s', 5.0)
@@ -117,6 +141,7 @@ class ImageWaypointsNode(Node):
         image = self.get_parameter('image').get_parameter_value().string_value
         max_frac = self.get_parameter('max_frac').get_parameter_value().double_value
         simplify_eps = self.get_parameter('simplify_eps').get_parameter_value().double_value
+        resample_spacing = self.get_parameter('resample_spacing').get_parameter_value().double_value
         invert = self.get_parameter('invert').get_parameter_value().string_value
         preview = self.get_parameter('preview').get_parameter_value().string_value
         republish_s = self.get_parameter('republish_s').get_parameter_value().double_value
@@ -133,6 +158,10 @@ class ImageWaypointsNode(Node):
         norm_pts, (nw, nh, pw, ph) = pixels_to_normalized(
             pts_px, img_w, img_h, max_frac=max_frac
         )
+        # Resample to (roughly) uniform spacing along the path so the bot
+        # gets evenly-spaced targets instead of clumps from approxPolyDP.
+        if resample_spacing > 0:
+            norm_pts = resample_uniform(norm_pts, resample_spacing)
         # Clamp into [0,1] just in case max_frac > 1.
         norm_pts = np.clip(norm_pts, 0.0, 1.0)
         self.waypoints = [(float(x), float(y)) for x, y in norm_pts]

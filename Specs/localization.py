@@ -66,8 +66,11 @@ def localize_bot(bot_detection, board_corners):
     pt = np.array([[tag_center]], dtype=np.float32)
     dst = cv2.perspectiveTransform(pt, H)[0][0]
 
-    # Swap so the published x = "across the board" and y = "down the board"
-    # matches the user's expected orientation.
+    # The physical tag arrangement is rotated relative to the labels in
+    # BOARD_CORNER_TAG_IDS, so the homography output components are
+    # (down, across). Swap so the published convention is x = across
+    # (TL→TR direction) and y = down (TL→BL direction), matching
+    # image_waypoints.py and the ESP32.
     x_norm = np.clip(dst[1], 0.0, 1.0)
     y_norm = np.clip(dst[0], 0.0, 1.0)
 
@@ -82,11 +85,11 @@ def localize_bot(bot_detection, board_corners):
     top_mid = (corners[2] + corners[3]) / 2.0
     pts_img = np.array([[bottom_mid], [top_mid]], dtype=np.float32)
     pts_board = cv2.perspectiveTransform(pts_img, H).reshape(-1, 2)
-    # pts_board components are (across, down); swap to match the published
-    # (x=across, y=down) convention before computing the heading.
-    up_vec_x = pts_board[1][1] - pts_board[0][1]
-    up_vec_y = pts_board[1][0] - pts_board[0][0]
-    # Heading: 0° = -y board direction (board "up"), increasing clockwise.
+    # pts_board components are (down, across); swap into (x=across, y=down)
+    # before computing heading.
+    up_vec_x = pts_board[1][1] - pts_board[0][1]   # across delta
+    up_vec_y = pts_board[1][0] - pts_board[0][0]   # down delta
+    # Heading: 0° = -y direction (board "up"), increasing clockwise.
     heading_deg = (np.degrees(np.arctan2(up_vec_x, -up_vec_y))) % 360.0
 
     return {

@@ -54,6 +54,23 @@ def extract_path(image_path, simplify_eps=2.0, invert='auto'):
     return pts, work, w, h, len(contours)
 
 
+def resample_uniform(pts, spacing_norm):
+    if spacing_norm <= 0 or len(pts) < 2:
+        return pts
+    diffs = np.diff(pts, axis=0)
+    seg_lens = np.linalg.norm(diffs, axis=1)
+    cum = np.concatenate([[0.0], np.cumsum(seg_lens)])
+    total = cum[-1]
+    if total == 0:
+        return pts
+    n = max(2, int(round(total / spacing_norm)))
+    new_dists = np.linspace(0.0, total, n)
+    new_pts = np.empty((n, 2), dtype=pts.dtype)
+    for i in range(2):
+        new_pts[:, i] = np.interp(new_dists, cum, pts[:, i])
+    return new_pts
+
+
 def pixels_to_normalized(pts_px, img_w, img_h, max_frac=0.8):
     img_aspect = img_w / img_h
     board_aspect = BOARD_W_IN / BOARD_H_IN
@@ -146,6 +163,8 @@ def main(argv=None):
     ap.add_argument("image", help="Path to input image")
     ap.add_argument("--max-frac", type=float, default=0.8, help="Fraction of board to fill (default 0.8)")
     ap.add_argument("--simplify-eps", type=float, default=2.0, help="approxPolyDP epsilon in input pixels (default 2.0)")
+    ap.add_argument("--resample-spacing", type=float, default=0.05,
+                     help="Target spacing between waypoints in normalized board units (0 to disable, default 0.05)")
     ap.add_argument("--invert", choices=['auto', 'yes', 'no'], default='auto')
     ap.add_argument("-o", "--output", default=None, help="Save board-view preview here")
     args = ap.parse_args(argv)
@@ -156,6 +175,8 @@ def main(argv=None):
     norm_pts, (nw, nh, pw, ph) = pixels_to_normalized(
         pts_px, w, h, max_frac=args.max_frac,
     )
+    if args.resample_spacing > 0:
+        norm_pts = resample_uniform(norm_pts, args.resample_spacing)
     norm_pts = np.clip(norm_pts, 0.0, 1.0)
 
     print(f"Image:        {w}x{h} px   (contours found: {n_contours})")

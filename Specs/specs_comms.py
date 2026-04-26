@@ -161,6 +161,11 @@ class SpecsCommsNode(Node):
                 f"(dist={dist_norm * self.board_size_m * 100:.1f}cm); advancing"
             )
             self.current_wp_idx += 1
+            # Send the next waypoint immediately so the ESP32's lookahead
+            # controller gets a fresh path right away — otherwise the bot
+            # idles until the next timer tick (and may scrub many waypoints
+            # forward in the meantime, causing a big jump).
+            self.send_current_waypoint()
 
     def send_current_waypoint(self):
         if not self.waypoints:
