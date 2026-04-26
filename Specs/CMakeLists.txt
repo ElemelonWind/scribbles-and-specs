@@ -11,6 +11,7 @@ install(PROGRAMS
   socket_test.py
   specs_comms.py
   draw_waypoints.py
+  image_waypoints.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

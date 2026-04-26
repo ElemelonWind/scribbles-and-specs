@@ -8,6 +8,8 @@ This package contains ROS 2 Python nodes that subscribe to `/camera/image_raw` a
 - `ink_detection.py` — detects ink marks inside the board region and publishes `/specs/ink_waypoints`
 - `ink_detection_test.py` — standalone (non-ROS) test harness for the ink detection pipeline on a single image
 - `draw_waypoints.py` — drop-in replacement for `ink_detection.py` for "always-drawing marker" mode; publishes a fixed shape (square / circle / star / …) as a single continuous waypoint path
+- `image_waypoints.py` — converts an input image into a single-stroke waypoint path (largest contour) and publishes it; same drop-in replacement for `ink_detection.py`. Aspect-ratio aware against the physical 45×29 in board.
+- `image_waypoints_test.py` — standalone (non-ROS) preview for the above; loads an image and renders the resulting path on a board-shaped grid so you can sanity-check before sending the bot anywhere
 - `socket_test.py` — opens a TCP socket to Scribbles, sends a `ping`, and logs the response
 - `specs_comms.py` — subscribes to `/specs/bot_pose` + `/specs/ink_waypoints` and sends 3-byte packets to the ESP32
 
@@ -25,7 +27,7 @@ From the package directory:
 
 ```bash
 cd /home/mbot/scribbles-and-specs/Specs
-chmod +x localization.py ink_detection.py socket_test.py specs_comms.py # might need to run
+chmod +x localization.py ink_detection.py socket_test.py specs_comms.py draw_waypoints.py # might need to run
 colcon build --symlink-install
 ```
 
@@ -63,6 +65,12 @@ ros2 run specs ink_detection.py
 ros2 run specs draw_waypoints.py \
     --ros-args -p shape:=square -p center_x:=0.5 -p center_y:=0.5 -p size:=0.2
 # Other shapes: triangle, circle, star, line, zigzag
+
+# 3c. Image-trace mode: convert an image's largest contour into a single-stroke path
+ros2 run specs image_waypoints.py \
+    --ros-args -p image:=/path/to/picture.png \
+                -p max_frac:=0.8 -p simplify_eps:=2.0 \
+                -p preview:=/tmp/path_preview.png
 
 # 4. Comms bridge (forwards to the ESP32)
 ros2 run specs specs_comms.py \
