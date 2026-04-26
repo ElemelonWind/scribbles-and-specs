@@ -21,6 +21,8 @@ class LookaheadController {
     float speed = 0.5f;
     float r = 0.02f; // wheel radius
 
+    float kp_w = 0.05;
+
     void calcLookaheadPoint(float curr_x, float curr_y, float& lookahead_x, float& lookahead_y);
 
 public:

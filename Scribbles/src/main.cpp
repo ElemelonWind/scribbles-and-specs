@@ -67,6 +67,14 @@ int handle_packet(const uint8_t buf[3])
   uint8_t x = buf[1];
   uint8_t y = buf[2];
 
+  if (buf[0] == 0xFF && buf[1] == 0xFF && buf[2] == 0xFF)
+  {
+    // Special message to reset bot location.
+    bot_loc = {false, 0, 0, 0};
+    Serial.println("RESET");
+    return LOCATION_MSG_TYPE;
+  }
+
   // Convert grid coordinates to meters
   float x_m = (float)x * whiteboard_width / 255.0f;
   float y_m = (float)y * whiteboard_height / 255.0f;
@@ -89,8 +97,8 @@ int handle_packet(const uint8_t buf[3])
 float targetSpeed = 0.5f;
 
 #undef WHEEL_CHECK
-#define DRIVING_PATH_TEST
-#undef REMOTE_DRIVING
+#undef DRIVING_PATH_TEST
+#define REMOTE_DRIVING
 
 void setup()
 {
@@ -233,6 +241,12 @@ void loop()
         }
         else if (msg_type == LOCATION_MSG_TYPE)
         {
+          if (!bot_loc.valid)
+          {
+            // If location is not valid, stop the bot and reset.
+            wheel_speed_cmd = {0, 0, 0};
+            current_wp.valid = false;
+          }
           // Update lookahead controller with new location and compute command.
           if (current_wp.valid)
           {

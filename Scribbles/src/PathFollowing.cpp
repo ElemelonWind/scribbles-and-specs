@@ -43,7 +43,7 @@ WheelCommand LookaheadController::command(float curr_x, float curr_y, float curr
     // Convert global velocities to robot frame
     float vel_x = cos(curr_theta) * vel_x_global - sin(curr_theta) * vel_y_global;
     float vel_y = sin(curr_theta) * vel_x_global + cos(curr_theta) * vel_y_global;
-    w = 0.1 * w;
+    w = kp_w * w;
 
     float u0 = (1/r) * d * w + vel_x;
     float u1 = (1/r) * d * w - 0.5f * vel_x + (sqrt(3) / 2) * vel_y;
