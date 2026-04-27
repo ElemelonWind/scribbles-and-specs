@@ -7,6 +7,10 @@ install(PROGRAMS
   apriltag_test.py
   localization.py
   video_display.py
+  ink_detection.py
+  socket_test.py
+  specs_comms.py
+  draw_waypoints.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
