@@ -1,75 +1,76 @@
 #!/usr/bin/env python3
 """
-Drop-in replacement for the camera-based ink detector. Instead of trying to
-find ink and revisit specific spots — which kept changing its mind and
-re-driving to the same place — this node just publishes a serpentine sweep
-that drags the eraser across the entire inset board area. Reliable, no
-perception required.
+Ink detection — eraser sweep mode.
+
+We replaced the camera-based detector with a hardcoded serpentine sweep.
+The detector kept jittering and re-driving to the same spot; running the
+bot in a fixed pass over the whole board cleans the whiteboard without any
+perception. Mirrors draw_waypoints.py's structure since that's known to
+move the bot reliably.
 
 Publishes:
   /specs/ink_waypoints  geometry_msgs/PoseArray  (board-normalized x/y in [0,1])
 
-ROS parameters:
-  sweep_rows    number of horizontal rows in the serpentine (default 6)
-  inset_in      inches the bot's tag stays away from each edge (default 6)
-  republish_s   how often to re-broadcast the same waypoint list (default 5)
+Parameters:
+  rows         number of horizontal serpentine rows (default 6)
+  margin_x     normalized inset on the left/right edges (default 0.13 ≈ 6 in)
+  margin_y     normalized inset on the top/bottom edges (default 0.21 ≈ 6 in)
+  republish_s  period to re-publish the same waypoint list (default 5.0)
 """
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseArray, Pose
 
 
-# Physical board dimensions (matches Scribbles main.cpp).
-BOARD_WIDTH_IN = 45.0
-BOARD_HEIGHT_IN = 29.0
-
-
-def generate_sweep_waypoints(num_rows, inset_in):
-    """Serpentine sweep across the inset rectangle.
-
-    Returns tag-frame waypoints in (x_norm, y_norm); x = across (0 → 1 left
-    to right), y = down (0 → 1 top to bottom). The tag stays >= inset_in
-    inches from every edge so the bot never approaches the corner AprilTags.
+def sweep(margin_x, margin_y, rows):
+    """Alternating-row serpentine over the rectangle
+    [margin_x, 1-margin_x] × [margin_y, 1-margin_y].
     """
-    tag_x_min = inset_in
-    tag_x_max = BOARD_WIDTH_IN - inset_in
-    tag_y_min = inset_in
-    tag_y_max = BOARD_HEIGHT_IN - inset_in
-
-    waypoints = []
-    for i in range(num_rows):
-        if num_rows == 1:
-            tag_y = (tag_y_min + tag_y_max) / 2.0
+    x_min, x_max = margin_x, 1.0 - margin_x
+    y_min, y_max = margin_y, 1.0 - margin_y
+    pts = []
+    for i in range(rows):
+        if rows == 1:
+            y = (y_min + y_max) / 2.0
         else:
-            tag_y = tag_y_min + i * (tag_y_max - tag_y_min) / (num_rows - 1)
-        # Alternate direction on each row so consecutive waypoints stay
-        # close together → continuous serpentine path, not zig-zag jumps.
-        xs = [tag_x_min, tag_x_max] if i % 2 == 0 else [tag_x_max, tag_x_min]
-        for x in xs:
-            waypoints.append((x / BOARD_WIDTH_IN, tag_y / BOARD_HEIGHT_IN))
-    return waypoints
+            y = y_min + i * (y_max - y_min) / (rows - 1)
+        if i % 2 == 0:
+            pts.append((x_min, y))
+            pts.append((x_max, y))
+        else:
+            pts.append((x_max, y))
+            pts.append((x_min, y))
+    return pts
 
 
-class InkSweepNode(Node):
+class InkDetectionNode(Node):
     def __init__(self):
         super().__init__('ink_detection')
 
-        self.declare_parameter('sweep_rows', 6)
-        self.declare_parameter('inset_in', 6.0)
+        # Defaults pick a 6-inch inset on a 45×29 in board:
+        #   6 / 45 ≈ 0.133  on x
+        #   6 / 29 ≈ 0.207  on y
+        self.declare_parameter('rows', 6)
+        self.declare_parameter('margin_x', 0.133)
+        self.declare_parameter('margin_y', 0.207)
         self.declare_parameter('republish_s', 5.0)
 
-        rows = self.get_parameter('sweep_rows').get_parameter_value().integer_value
-        inset = self.get_parameter('inset_in').get_parameter_value().double_value
+        rows = self.get_parameter('rows').get_parameter_value().integer_value
+        mx = self.get_parameter('margin_x').get_parameter_value().double_value
+        my = self.get_parameter('margin_y').get_parameter_value().double_value
         republish_s = self.get_parameter('republish_s').get_parameter_value().double_value
 
-        self.waypoints = generate_sweep_waypoints(rows, inset)
+        raw = sweep(mx, my, rows)
+        # Clamp to the board (paranoid).
+        self.waypoints = [(max(0.0, min(1.0, x)), max(0.0, min(1.0, y))) for x, y in raw]
 
         self.pub = self.create_publisher(PoseArray, '/specs/ink_waypoints', 10)
         self.timer = self.create_timer(republish_s, self.publish_waypoints)
+        # Publish immediately too.
         self.publish_waypoints()
 
         self.get_logger().info(
-            f"ink_detection sweep: rows={rows} inset={inset}\" "
+            f"ink_detection: rows={rows} margin=({mx:.3f},{my:.3f}) "
             f"→ {len(self.waypoints)} waypoints, republishing every {republish_s}s"
         )
         for i, (x, y) in enumerate(self.waypoints):
@@ -90,7 +91,7 @@ class InkSweepNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = InkSweepNode()
+    node = InkDetectionNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:
