@@ -1,0 +1,1440 @@
+[INFO] [1777215563.418258918] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215563.429353524] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215563.474907556] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215563.524547525] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.572582658] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.621119992] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.670832567] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.719446376] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.767133574] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.815582766] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215563.865440459] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.913226982] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215563.961917378] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.010810554] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.059897604] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.107165686] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.156460534] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.205607487] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.255264473] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.303213131] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.351795980] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.399606131] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.448537878] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.497613706] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.545680151] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.594292590] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.644126507] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.691821500] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.741344664] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.789416627] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.7°
+[INFO] [1777215564.838901830] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.886803511] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.936324915] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215564.985410946] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.032613052] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.083054643] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.131109978] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.179423070] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.227403689] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.276764883] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.325499405] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.373656214] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.422860124] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.471683047] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.519764250] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.568774324] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.618590261] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.666259256] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.716139872] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.763236320] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215565.812656399] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.861858273] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.909111949] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215565.957956869] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.006702261] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215566.055916874] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215566.105037403] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215566.153005189] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215566.202586977] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.251923192] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.6°
+[INFO] [1777215566.299346188] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.349494432] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.394285691] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.442289104] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.491866763] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.539423248] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.588709560] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.635999825] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.688014921] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.734262047] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.783802487] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.833117203] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.881167520] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.930028032] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215566.978533609] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.026206492] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.075296079] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.123931349] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.171905061] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.221930869] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.269422471] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.319071698] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.368779976] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.419206013] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.466765646] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.516806157] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.564407324] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.613036150] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.661329336] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.709717108] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.759641943] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.807360897] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.855693784] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.904559814] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215567.954254648] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.003616028] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.052900506] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.100710527] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.148397780] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.196328272] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.245890451] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.293691472] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.342530800] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.390792082] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.441373365] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.488622874] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.537413484] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.587692421] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.635326696] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.5°
+[INFO] [1777215568.683685599] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.733120936] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.780580688] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.829816133] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.879565464] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.927167297] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215568.976051770] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.025026346] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.073142398] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.122443616] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.170762467] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.219802279] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.266864322] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.316720181] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.366382333] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.413738759] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215569.463353212] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215569.511427896] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215569.559709602] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.608022212] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.658282021] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.706711826] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.754929055] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.802078609] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215569.852523570] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.901623081] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.948210624] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215569.998279985] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.046364391] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.093714559] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.144257141] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.194308726] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.242057510] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.290578586] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.340303955] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.4°
+[INFO] [1777215570.388633175] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.437711614] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.485323465] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.534084781] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.582556064] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.631454591] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.680885520] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.728539849] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.776997837] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.825742265] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215570.873724217] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215570.922976771] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215570.972360149] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215571.019152861] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.069222073] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.118838266] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.166346532] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.214836073] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.262906147] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.312692030] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.360532363] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.410315579] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.456804648] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.507002091] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.555692820] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.604267928] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.654369360] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215571.702371662] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.750186274] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.799113410] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.848598743] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.895975686] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.946281343] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215571.993937079] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.043166265] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.091842680] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.141393229] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.188961824] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.236344156] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.286528267] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.335422961] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.382971280] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.431974669] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.478333081] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.529655880] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.577711214] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.627162309] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.673974408] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.724728732] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215572.773300100] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.821821175] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.871662943] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.919404339] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215572.968547809] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.016344275] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.064921031] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.114084482] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.162710511] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.209378937] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.3°
+[INFO] [1777215573.258985759] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.308466314] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.357774772] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.405673841] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.453977174] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.503413695] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.551427273] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.600583743] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215573.649672940] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215573.699006081] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.746128007] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.795241369] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.843283241] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215573.892117791] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.941526334] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215573.990641195] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.038789189] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.087629887] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.136477214] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.184349396] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.233987975] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.281988573] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.330378177] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.379972019] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.428841122] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.476199475] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.525366999] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215574.573760565] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.623005231] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.671607282] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.719223373] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.768918096] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.817360622] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.865840904] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.913560153] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215574.963915398] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.012464916] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.061517189] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.108843081] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215575.158215052] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.206661800] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.255752867] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.303510224] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.354359763] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.401841921] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.450748910] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.500852656] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.548555629] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.595815100] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.644323602] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.2°
+[INFO] [1777215575.693675945] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.743293600] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.792404665] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.837318914] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.885324604] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.935245531] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215575.983192707] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.031571830] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.0°
+[INFO] [1777215576.079433087] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.128123149] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.174858420] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.222895811] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.269543071] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.322347919] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.364552400] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.412895563] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.459593116] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.507731258] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.555656454] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.603455605] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.653190843] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.702453304] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.746899293] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.797810994] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.845814795] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.892148358] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215576.939334372] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.0°
+[INFO] [1777215576.986179005] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.0°
+[INFO] [1777215577.034572516] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.0°
+[INFO] [1777215577.082265693] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215577.130054641] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215577.176245770] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=0.0°
+[INFO] [1777215577.224377061] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=360.0°
+[INFO] [1777215577.270137595] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=0.0°
+[INFO] [1777215577.317766184] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.199,0.266) heading=0.1°
+[INFO] [1777215577.364651203] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.9°
+[INFO] [1777215577.411024244] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=0.0°
+[INFO] [1777215577.458831320] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.9°
+[INFO] [1777215577.506674430] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.8°
+[INFO] [1777215577.554474358] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.9°
+[INFO] [1777215577.601026366] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.9°
+[INFO] [1777215577.648756004] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=0.0°
+[INFO] [1777215577.697369460] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.7°
+[INFO] [1777215577.744466129] [localization]: Scribble bot tag not detected
+[INFO] [1777215577.792436951] [localization]: Scribble bot tag not detected
+[INFO] [1777215577.842336213] [localization]: Scribble bot tag not detected
+[INFO] [1777215577.891923186] [localization]: Scribble bot tag not detected
+[INFO] [1777215577.942425678] [localization]: Scribble bot tag not detected
+[INFO] [1777215577.992414507] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.042254089] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.091883076] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.142324537] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.192147638] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.243285062] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.292013565] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.343961499] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.393564303] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.443158367] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.493908081] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.545926249] [localization]: Scribble coordinates: grid=(67, 50) norm=(0.200,0.266) heading=359.7°
+[INFO] [1777215578.595421433] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.646329708] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.696574332] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.748058820] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.798341941] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.847701468] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.899195179] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.950235869] [localization]: Scribble bot tag not detected
+[INFO] [1777215578.999291272] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.050790982] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.102602316] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.152504115] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.204251212] [localization]: Scribble coordinates: grid=(67, 51) norm=(0.203,0.267) heading=1.3°
+[INFO] [1777215579.254346015] [localization]: Scribble coordinates: grid=(67, 51) norm=(0.205,0.268) heading=1.9°
+[INFO] [1777215579.304710629] [localization]: Scribble coordinates: grid=(68, 52) norm=(0.205,0.268) heading=2.3°
+[INFO] [1777215579.355856015] [localization]: Scribble coordinates: grid=(68, 52) norm=(0.207,0.268) heading=2.9°
+[INFO] [1777215579.404574204] [localization]: Scribble coordinates: grid=(68, 53) norm=(0.209,0.268) heading=3.6°
+[INFO] [1777215579.456900700] [localization]: Scribble coordinates: grid=(68, 53) norm=(0.210,0.269) heading=4.3°
+[INFO] [1777215579.506269338] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.554550005] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.605890580] [localization]: Scribble coordinates: grid=(68, 54) norm=(0.216,0.271) heading=3.9°
+[INFO] [1777215579.655699941] [localization]: Scribble coordinates: grid=(69, 55) norm=(0.219,0.273) heading=4.4°
+[INFO] [1777215579.705229640] [localization]: Scribble coordinates: grid=(69, 55) norm=(0.220,0.273) heading=3.4°
+[INFO] [1777215579.755831143] [localization]: Scribble coordinates: grid=(69, 56) norm=(0.223,0.275) heading=3.2°
+[INFO] [1777215579.803068727] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.852842388] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.901915752] [localization]: Scribble bot tag not detected
+[INFO] [1777215579.951553794] [localization]: Scribble coordinates: grid=(70, 59) norm=(0.235,0.277) heading=6.1°
+[INFO] [1777215580.000398269] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.051275491] [localization]: Scribble coordinates: grid=(71, 61) norm=(0.242,0.280) heading=5.2°
+[INFO] [1777215580.099284273] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.147879564] [localization]: Scribble coordinates: grid=(71, 63) norm=(0.249,0.282) heading=3.5°
+[INFO] [1777215580.198029399] [localization]: Scribble coordinates: grid=(71, 64) norm=(0.254,0.283) heading=4.1°
+[INFO] [1777215580.246795288] [localization]: Scribble coordinates: grid=(71, 65) norm=(0.259,0.283) heading=4.5°
+[INFO] [1777215580.295858357] [localization]: Scribble coordinates: grid=(72, 67) norm=(0.264,0.284) heading=4.4°
+[INFO] [1777215580.344820137] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.392952983] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.444207324] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.492195551] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.540519012] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.589590173] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.639483232] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.689258985] [localization]: Scribble coordinates: grid=(73, 76) norm=(0.303,0.289) heading=1.5°
+[INFO] [1777215580.737333114] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.787079925] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.836617586] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.886131304] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.936081655] [localization]: Scribble bot tag not detected
+[INFO] [1777215580.984379895] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.035159921] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.084621070] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.134223874] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.184661241] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.233708182] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.284798905] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.334862821] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.385889901] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.436500218] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.486464049] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.536496468] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.588388572] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.639203206] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.691542350] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.740887785] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.792592553] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.843087712] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.894827551] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.946428290] [localization]: Scribble bot tag not detected
+[INFO] [1777215581.997122341] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.047521823] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.099481292] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.148168372] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.202490099] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.254375130] [localization]: Scribble coordinates: grid=(81, 114) norm=(0.452,0.320) heading=358.4°
+[INFO] [1777215582.304668084] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.357902693] [localization]: Scribble coordinates: grid=(82, 117) norm=(0.462,0.323) heading=358.1°
+[INFO] [1777215582.407540124] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.459253872] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.512233909] [localization]: Scribble coordinates: grid=(82, 120) norm=(0.476,0.324) heading=357.9°
+[INFO] [1777215582.563517080] [localization]: Scribble coordinates: grid=(81, 122) norm=(0.481,0.323) heading=357.9°
+[INFO] [1777215582.614505145] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.665937212] [localization]: Scribble bot tag not detected
+[INFO] [1777215582.719727278] [localization]: Scribble coordinates: grid=(80, 125) norm=(0.493,0.319) heading=358.3°
+[INFO] [1777215582.771187916] [localization]: Scribble coordinates: grid=(80, 126) norm=(0.498,0.317) heading=358.4°
+[INFO] [1777215582.823662382] [localization]: Scribble coordinates: grid=(80, 127) norm=(0.503,0.316) heading=358.8°
+[INFO] [1777215582.876718710] [localization]: Scribble coordinates: grid=(80, 129) norm=(0.509,0.315) heading=358.7°
+[INFO] [1777215582.927250514] [localization]: Scribble coordinates: grid=(80, 130) norm=(0.513,0.315) heading=358.8°
+[INFO] [1777215582.980225978] [localization]: Scribble coordinates: grid=(80, 131) norm=(0.517,0.316) heading=359.1°
+[INFO] [1777215583.031359161] [localization]: Scribble coordinates: grid=(80, 132) norm=(0.521,0.316) heading=359.5°
+[INFO] [1777215583.083233489] [localization]: Scribble coordinates: grid=(79, 133) norm=(0.524,0.315) heading=359.4°
+[INFO] [1777215583.135393887] [localization]: Scribble coordinates: grid=(79, 134) norm=(0.528,0.314) heading=358.8°
+[INFO] [1777215583.187316285] [localization]: Scribble coordinates: grid=(79, 135) norm=(0.533,0.314) heading=358.8°
+[INFO] [1777215583.238897711] [localization]: Scribble coordinates: grid=(79, 136) norm=(0.538,0.313) heading=358.6°
+[INFO] [1777215583.290878752] [localization]: Scribble coordinates: grid=(79, 137) norm=(0.543,0.313) heading=358.8°
+[INFO] [1777215583.342637627] [localization]: Scribble bot tag not detected
+[INFO] [1777215583.395390996] [localization]: Scribble coordinates: grid=(79, 140) norm=(0.552,0.313) heading=358.7°
+[INFO] [1777215583.445873583] [localization]: Scribble coordinates: grid=(79, 141) norm=(0.557,0.313) heading=358.8°
+[INFO] [1777215583.498587122] [localization]: Scribble coordinates: grid=(79, 142) norm=(0.561,0.313) heading=359.5°
+[INFO] [1777215583.551256628] [localization]: Scribble coordinates: grid=(79, 143) norm=(0.566,0.313) heading=360.0°
+[INFO] [1777215583.602617219] [localization]: Scribble coordinates: grid=(79, 145) norm=(0.571,0.314) heading=0.4°
+[INFO] [1777215583.653537604] [localization]: Scribble coordinates: grid=(79, 146) norm=(0.576,0.314) heading=0.8°
+[INFO] [1777215583.706470497] [localization]: Scribble bot tag not detected
+[INFO] [1777215583.757594699] [localization]: Scribble coordinates: grid=(79, 148) norm=(0.586,0.315) heading=1.0°
+[INFO] [1777215583.811233332] [localization]: Scribble coordinates: grid=(80, 150) norm=(0.591,0.315) heading=1.1°
+[INFO] [1777215583.861912477] [localization]: Scribble coordinates: grid=(80, 151) norm=(0.596,0.315) heading=1.2°
+[INFO] [1777215583.912935002] [localization]: Scribble coordinates: grid=(80, 152) norm=(0.601,0.316) heading=1.2°
+[INFO] [1777215583.964658453] [localization]: Scribble coordinates: grid=(80, 153) norm=(0.606,0.316) heading=1.2°
+[INFO] [1777215584.016487044] [localization]: Scribble coordinates: grid=(80, 155) norm=(0.610,0.316) heading=1.2°
+[INFO] [1777215584.066630194] [localization]: Scribble coordinates: grid=(80, 156) norm=(0.615,0.315) heading=1.5°
+[INFO] [1777215584.119339622] [localization]: Scribble coordinates: grid=(79, 157) norm=(0.619,0.315) heading=1.6°
+[INFO] [1777215584.171981760] [localization]: Scribble coordinates: grid=(79, 158) norm=(0.624,0.315) heading=1.6°
+[INFO] [1777215584.221712313] [localization]: Scribble coordinates: grid=(79, 159) norm=(0.629,0.315) heading=1.6°
+[INFO] [1777215584.273314496] [localization]: Scribble coordinates: grid=(79, 160) norm=(0.633,0.315) heading=1.5°
+[INFO] [1777215584.325424490] [localization]: Scribble coordinates: grid=(80, 162) norm=(0.638,0.315) heading=1.3°
+[INFO] [1777215584.376554155] [localization]: Scribble coordinates: grid=(80, 163) norm=(0.643,0.316) heading=1.2°
+[INFO] [1777215584.428063512] [localization]: Scribble coordinates: grid=(80, 164) norm=(0.647,0.316) heading=1.1°
+[INFO] [1777215584.479205620] [localization]: Scribble coordinates: grid=(80, 165) norm=(0.652,0.315) heading=1.4°
+[INFO] [1777215584.531210234] [localization]: Scribble coordinates: grid=(79, 166) norm=(0.656,0.315) heading=1.0°
+[INFO] [1777215584.581266891] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.632931383] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.683741147] [localization]: Scribble coordinates: grid=(80, 170) norm=(0.671,0.315) heading=359.5°
+[INFO] [1777215584.734387646] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.784736558] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.834189781] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.884141242] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.933760378] [localization]: Scribble bot tag not detected
+[INFO] [1777215584.985474626] [localization]: Scribble coordinates: grid=(88, 173) norm=(0.682,0.348) heading=356.0°
+[INFO] [1777215585.033303440] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.082591954] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.132710828] [localization]: Scribble coordinates: grid=(93, 173) norm=(0.682,0.369) heading=354.8°
+[INFO] [1777215585.182781187] [localization]: Scribble coordinates: grid=(95, 173) norm=(0.683,0.375) heading=355.6°
+[INFO] [1777215585.231416790] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.281409933] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.331307658] [localization]: Scribble coordinates: grid=(100, 173) norm=(0.684,0.395) heading=352.4°
+[INFO] [1777215585.380267234] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.429839966] [localization]: Scribble coordinates: grid=(103, 174) norm=(0.685,0.409) heading=352.3°
+[INFO] [1777215585.480481466] [localization]: Scribble coordinates: grid=(105, 174) norm=(0.686,0.415) heading=350.8°
+[INFO] [1777215585.529637138] [localization]: Scribble coordinates: grid=(107, 174) norm=(0.687,0.422) heading=349.9°
+[INFO] [1777215585.578441209] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.628394485] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.678801577] [localization]: Scribble bot tag not detected
+[INFO] [1777215585.730738029] [localization]: Scribble coordinates: grid=(114, 174) norm=(0.688,0.451) heading=348.1°
+[INFO] [1777215585.780716637] [localization]: Scribble coordinates: grid=(116, 174) norm=(0.687,0.458) heading=347.5°
+[INFO] [1777215585.831176910] [localization]: Scribble coordinates: grid=(118, 174) norm=(0.687,0.466) heading=347.6°
+[INFO] [1777215585.882931543] [localization]: Scribble coordinates: grid=(120, 174) norm=(0.686,0.473) heading=347.3°
+[INFO] [1777215585.933713291] [localization]: Scribble coordinates: grid=(122, 174) norm=(0.686,0.481) heading=346.7°
+[INFO] [1777215585.984628343] [localization]: Scribble coordinates: grid=(124, 174) norm=(0.686,0.490) heading=346.5°
+[INFO] [1777215586.035920494] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.086022092] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.137043950] [localization]: Scribble coordinates: grid=(129, 174) norm=(0.685,0.511) heading=346.7°
+[INFO] [1777215586.189383537] [localization]: Scribble coordinates: grid=(131, 173) norm=(0.685,0.517) heading=345.5°
+[INFO] [1777215586.239875456] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.291598111] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.342840396] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.393691268] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.443470113] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.495110033] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.545287828] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.596007396] [localization]: Scribble bot tag not detected
+[INFO] [1777215586.648212586] [localization]: Scribble coordinates: grid=(148, 174) norm=(0.685,0.586) heading=345.4°
+[INFO] [1777215586.699243740] [localization]: Scribble coordinates: grid=(150, 174) norm=(0.686,0.594) heading=345.2°
+[INFO] [1777215586.750007322] [localization]: Scribble coordinates: grid=(152, 174) norm=(0.686,0.602) heading=344.9°
+[INFO] [1777215586.800538701] [localization]: Scribble coordinates: grid=(154, 174) norm=(0.687,0.610) heading=344.9°
+[INFO] [1777215586.852580089] [localization]: Scribble coordinates: grid=(156, 174) norm=(0.687,0.618) heading=345.0°
+[INFO] [1777215586.903106042] [localization]: Scribble coordinates: grid=(158, 174) norm=(0.687,0.625) heading=344.7°
+[INFO] [1777215586.955082603] [localization]: Scribble coordinates: grid=(160, 174) norm=(0.687,0.633) heading=344.2°
+[INFO] [1777215587.006002673] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.056691594] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.108548979] [localization]: Scribble coordinates: grid=(165, 174) norm=(0.689,0.653) heading=344.0°
+[INFO] [1777215587.160266671] [localization]: Scribble coordinates: grid=(167, 175) norm=(0.689,0.660) heading=344.7°
+[INFO] [1777215587.210034480] [localization]: Scribble coordinates: grid=(169, 175) norm=(0.690,0.666) heading=344.5°
+[INFO] [1777215587.261274784] [localization]: Scribble coordinates: grid=(170, 175) norm=(0.691,0.672) heading=344.4°
+[INFO] [1777215587.311931541] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.362482881] [localization]: Scribble coordinates: grid=(172, 174) norm=(0.688,0.679) heading=346.3°
+[INFO] [1777215587.412142587] [localization]: Scribble coordinates: grid=(173, 174) norm=(0.685,0.682) heading=347.7°
+[INFO] [1777215587.462099492] [localization]: Scribble coordinates: grid=(173, 173) norm=(0.682,0.685) heading=347.1°
+[INFO] [1777215587.509147942] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.561381168] [localization]: Scribble coordinates: grid=(175, 171) norm=(0.675,0.691) heading=349.1°
+[INFO] [1777215587.610829372] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.660764409] [localization]: Scribble coordinates: grid=(176, 169) norm=(0.669,0.694) heading=348.4°
+[INFO] [1777215587.709011690] [localization]: Scribble bot tag not detected
+[INFO] [1777215587.759410523] [localization]: Scribble coordinates: grid=(177, 168) norm=(0.663,0.698) heading=350.7°
+[INFO] [1777215587.809316247] [localization]: Scribble coordinates: grid=(177, 167) norm=(0.661,0.698) heading=350.3°
+[INFO] [1777215587.858919143] [localization]: Scribble coordinates: grid=(177, 167) norm=(0.658,0.698) heading=351.0°
+[INFO] [1777215587.908553629] [localization]: Scribble coordinates: grid=(177, 166) norm=(0.656,0.697) heading=351.0°
+[INFO] [1777215587.957248486] [localization]: Scribble coordinates: grid=(176, 166) norm=(0.654,0.696) heading=351.2°
+[INFO] [1777215588.007361860] [localization]: Scribble coordinates: grid=(176, 165) norm=(0.651,0.695) heading=350.1°
+[INFO] [1777215588.056935203] [localization]: Scribble coordinates: grid=(176, 164) norm=(0.649,0.694) heading=349.7°
+[INFO] [1777215588.104712669] [localization]: Scribble bot tag not detected
+[INFO] [1777215588.154356784] [localization]: Scribble coordinates: grid=(175, 163) norm=(0.642,0.690) heading=352.0°
+[INFO] [1777215588.203212610] [localization]: Scribble coordinates: grid=(174, 162) norm=(0.638,0.689) heading=351.6°
+[INFO] [1777215588.253246638] [localization]: Scribble coordinates: grid=(174, 160) norm=(0.634,0.687) heading=350.6°
+[INFO] [1777215588.301900350] [localization]: Scribble coordinates: grid=(173, 159) norm=(0.629,0.684) heading=351.3°
+[INFO] [1777215588.350864519] [localization]: Scribble coordinates: grid=(173, 158) norm=(0.625,0.682) heading=352.2°
+[INFO] [1777215588.410967623] [localization]: Scribble coordinates: grid=(172, 157) norm=(0.621,0.680) heading=351.8°
+[INFO] [1777215588.448753674] [localization]: Scribble coordinates: grid=(172, 156) norm=(0.616,0.678) heading=352.1°
+[INFO] [1777215588.498333054] [localization]: Scribble coordinates: grid=(171, 155) norm=(0.612,0.676) heading=352.6°
+[INFO] [1777215588.547635029] [localization]: Scribble coordinates: grid=(171, 154) norm=(0.607,0.675) heading=352.8°
+[INFO] [1777215588.596959521] [localization]: Scribble coordinates: grid=(171, 153) norm=(0.604,0.675) heading=352.5°
+[INFO] [1777215588.646353175] [localization]: Scribble coordinates: grid=(171, 152) norm=(0.599,0.674) heading=352.1°
+[INFO] [1777215588.695171059] [localization]: Scribble coordinates: grid=(171, 151) norm=(0.596,0.674) heading=351.2°
+[INFO] [1777215588.743501018] [localization]: Scribble coordinates: grid=(170, 150) norm=(0.592,0.673) heading=349.9°
+[INFO] [1777215588.792866118] [localization]: Scribble coordinates: grid=(170, 149) norm=(0.588,0.671) heading=350.0°
+[INFO] [1777215588.841956999] [localization]: Scribble coordinates: grid=(170, 148) norm=(0.584,0.670) heading=350.9°
+[INFO] [1777215588.891900350] [localization]: Scribble coordinates: grid=(169, 147) norm=(0.579,0.668) heading=352.4°
+[INFO] [1777215588.940433590] [localization]: Scribble coordinates: grid=(169, 145) norm=(0.575,0.666) heading=351.2°
+[INFO] [1777215588.989809596] [localization]: Scribble coordinates: grid=(168, 144) norm=(0.570,0.665) heading=350.4°
+[INFO] [1777215589.038850537] [localization]: Scribble coordinates: grid=(168, 143) norm=(0.566,0.663) heading=351.2°
+[INFO] [1777215589.088858845] [localization]: Scribble coordinates: grid=(168, 142) norm=(0.560,0.662) heading=352.6°
+[INFO] [1777215589.136672345] [localization]: Scribble coordinates: grid=(167, 140) norm=(0.555,0.661) heading=352.6°
+[INFO] [1777215589.186724002] [localization]: Scribble coordinates: grid=(167, 139) norm=(0.550,0.660) heading=352.4°
+[INFO] [1777215589.235684115] [localization]: Scribble coordinates: grid=(167, 138) norm=(0.546,0.659) heading=352.2°
+[INFO] [1777215589.284377731] [localization]: Scribble coordinates: grid=(167, 137) norm=(0.541,0.658) heading=351.9°
+[INFO] [1777215589.334049474] [localization]: Scribble coordinates: grid=(166, 136) norm=(0.536,0.657) heading=352.1°
+[INFO] [1777215589.383652944] [localization]: Scribble coordinates: grid=(166, 134) norm=(0.531,0.657) heading=352.2°
+[INFO] [1777215589.432534526] [localization]: Scribble coordinates: grid=(166, 133) norm=(0.526,0.657) heading=352.4°
+[INFO] [1777215589.481362576] [localization]: Scribble coordinates: grid=(167, 132) norm=(0.521,0.659) heading=352.8°
+[INFO] [1777215589.530611685] [localization]: Scribble coordinates: grid=(167, 131) norm=(0.516,0.661) heading=352.6°
+[INFO] [1777215589.579711177] [localization]: Scribble coordinates: grid=(168, 129) norm=(0.512,0.663) heading=352.9°
+[INFO] [1777215589.629665323] [localization]: Scribble coordinates: grid=(169, 129) norm=(0.508,0.666) heading=352.1°
+[INFO] [1777215589.677930584] [localization]: Scribble coordinates: grid=(169, 128) norm=(0.504,0.669) heading=352.5°
+[INFO] [1777215589.727961909] [localization]: Scribble coordinates: grid=(170, 126) norm=(0.500,0.671) heading=353.0°
+[INFO] [1777215589.775403938] [localization]: Scribble coordinates: grid=(171, 125) norm=(0.496,0.674) heading=352.9°
+[INFO] [1777215589.825189024] [localization]: Scribble coordinates: grid=(171, 124) norm=(0.492,0.677) heading=353.4°
+[INFO] [1777215589.873706061] [localization]: Scribble coordinates: grid=(172, 123) norm=(0.487,0.679) heading=353.3°
+[INFO] [1777215589.922798831] [localization]: Scribble coordinates: grid=(173, 122) norm=(0.482,0.681) heading=353.3°
+[INFO] [1777215589.972431428] [localization]: Scribble coordinates: grid=(173, 121) norm=(0.479,0.683) heading=353.7°
+[INFO] [1777215590.021525883] [localization]: Scribble coordinates: grid=(173, 120) norm=(0.475,0.685) heading=353.7°
+[INFO] [1777215590.071526673] [localization]: Scribble coordinates: grid=(174, 119) norm=(0.471,0.687) heading=353.4°
+[INFO] [1777215590.119841282] [localization]: Scribble coordinates: grid=(174, 118) norm=(0.467,0.688) heading=353.4°
+[INFO] [1777215590.167576436] [localization]: Scribble coordinates: grid=(175, 117) norm=(0.463,0.689) heading=353.2°
+[INFO] [1777215590.218425512] [localization]: Scribble coordinates: grid=(175, 116) norm=(0.458,0.690) heading=353.4°
+[INFO] [1777215590.267206621] [localization]: Scribble coordinates: grid=(175, 115) norm=(0.454,0.690) heading=353.5°
+[INFO] [1777215590.315120613] [localization]: Scribble coordinates: grid=(175, 114) norm=(0.449,0.690) heading=353.6°
+[INFO] [1777215590.364721231] [localization]: Scribble coordinates: grid=(175, 112) norm=(0.444,0.690) heading=353.5°
+[INFO] [1777215590.413468269] [localization]: Scribble coordinates: grid=(175, 111) norm=(0.439,0.690) heading=353.5°
+[INFO] [1777215590.462911418] [localization]: Scribble coordinates: grid=(175, 110) norm=(0.434,0.689) heading=354.0°
+[INFO] [1777215590.512700429] [localization]: Scribble coordinates: grid=(174, 109) norm=(0.429,0.688) heading=355.2°
+[INFO] [1777215590.561293349] [localization]: Scribble coordinates: grid=(174, 107) norm=(0.425,0.687) heading=356.3°
+[INFO] [1777215590.610428967] [localization]: Scribble coordinates: grid=(174, 106) norm=(0.420,0.686) heading=356.8°
+[INFO] [1777215590.660026308] [localization]: Scribble bot tag not detected
+[INFO] [1777215590.709050898] [localization]: Scribble coordinates: grid=(173, 104) norm=(0.411,0.685) heading=355.0°
+[INFO] [1777215590.757333416] [localization]: Scribble coordinates: grid=(173, 103) norm=(0.406,0.684) heading=354.4°
+[INFO] [1777215590.807109521] [localization]: Scribble bot tag not detected
+[INFO] [1777215590.855431833] [localization]: Scribble bot tag not detected
+[INFO] [1777215590.905256970] [localization]: Scribble bot tag not detected
+[INFO] [1777215590.954589536] [localization]: Scribble coordinates: grid=(174, 98) norm=(0.389,0.687) heading=354.4°
+[INFO] [1777215591.003107943] [localization]: Scribble coordinates: grid=(174, 97) norm=(0.385,0.688) heading=353.3°
+[INFO] [1777215591.052147661] [localization]: Scribble coordinates: grid=(175, 96) norm=(0.381,0.689) heading=352.8°
+[INFO] [1777215591.101739521] [localization]: Scribble coordinates: grid=(175, 95) norm=(0.376,0.691) heading=352.4°
+[INFO] [1777215591.151690019] [localization]: Scribble coordinates: grid=(175, 94) norm=(0.372,0.693) heading=352.6°
+[INFO] [1777215591.200240665] [localization]: Scribble coordinates: grid=(176, 93) norm=(0.368,0.694) heading=352.2°
+[INFO] [1777215591.249967717] [localization]: Scribble coordinates: grid=(176, 92) norm=(0.364,0.695) heading=351.2°
+[INFO] [1777215591.298657648] [localization]: Scribble coordinates: grid=(176, 91) norm=(0.360,0.696) heading=349.9°
+[INFO] [1777215591.348754468] [localization]: Scribble coordinates: grid=(177, 90) norm=(0.357,0.697) heading=349.2°
+[INFO] [1777215591.396803690] [localization]: Scribble coordinates: grid=(177, 89) norm=(0.353,0.698) heading=349.1°
+[INFO] [1777215591.445296692] [localization]: Scribble coordinates: grid=(177, 88) norm=(0.349,0.700) heading=349.7°
+[INFO] [1777215591.495835088] [localization]: Scribble coordinates: grid=(178, 87) norm=(0.345,0.701) heading=350.0°
+[INFO] [1777215591.544226339] [localization]: Scribble coordinates: grid=(177, 86) norm=(0.341,0.699) heading=348.7°
+[INFO] [1777215591.593047575] [localization]: Scribble bot tag not detected
+[INFO] [1777215591.641289337] [localization]: Scribble coordinates: grid=(175, 86) norm=(0.339,0.689) heading=350.0°
+[INFO] [1777215591.689723585] [localization]: Scribble bot tag not detected
+[INFO] [1777215591.740585881] [localization]: Scribble coordinates: grid=(170, 84) norm=(0.334,0.673) heading=353.7°
+[INFO] [1777215591.789491276] [localization]: Scribble coordinates: grid=(168, 84) norm=(0.331,0.662) heading=355.3°
+[INFO] [1777215591.837415897] [localization]: Scribble bot tag not detected
+[INFO] [1777215591.887367395] [localization]: Scribble coordinates: grid=(163, 82) norm=(0.326,0.644) heading=358.5°
+[INFO] [1777215591.937872794] [localization]: Scribble coordinates: grid=(161, 82) norm=(0.323,0.635) heading=1.0°
+[INFO] [1777215591.986006121] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.035195734] [localization]: Scribble coordinates: grid=(156, 80) norm=(0.318,0.616) heading=4.3°
+[INFO] [1777215592.083340301] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.132987564] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.183090716] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.231714615] [localization]: Scribble coordinates: grid=(148, 79) norm=(0.314,0.585) heading=5.7°
+[INFO] [1777215592.281384469] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.328153792] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.378798124] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.427206281] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.476063495] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.525728978] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.575443661] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.624253435] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.673542170] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.722075502] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.770323524] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.820741207] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.869132513] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.919012628] [localization]: Scribble bot tag not detected
+[INFO] [1777215592.967794811] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.019187009] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.066883074] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.112839221] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.165114128] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.215151600] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.264549179] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.312681617] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.361398342] [localization]: Scribble coordinates: grid=(102, 79) norm=(0.312,0.403) heading=4.4°
+[INFO] [1777215593.409967671] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.458637233] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.508571825] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.557136451] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.606794453] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.655682887] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.704417036] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.754207176] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.803250246] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.851745637] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.901874491] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.950127030] [localization]: Scribble bot tag not detected
+[INFO] [1777215593.999216448] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.048137064] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.096976779] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.146733422] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.195671926] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.244254235] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.294302633] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.343846070] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.391787486] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.441204063] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.490441914] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.538102889] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.588300422] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.637320401] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.686051162] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.735819952] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.783589418] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.833953995] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.883198678] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.931255529] [localization]: Scribble bot tag not detected
+[INFO] [1777215594.980680920] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.029969155] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.079369919] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.129764770] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.178086785] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.227323580] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.275753920] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.324910166] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.372979109] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.422487549] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.471623981] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.519746198] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.568539787] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.616640801] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.666020529] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.714685758] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.762704742] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.811066069] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.860595711] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.910009029] [localization]: Scribble bot tag not detected
+[INFO] [1777215595.958095951] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.006803473] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.055160356] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.103127677] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.152424449] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.201091640] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.249158435] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.298459151] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.347115825] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.395139141] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.443498154] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.492654177] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.541666175] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.590841493] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.638395143] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.688343122] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.736143438] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.785022317] [localization]: Scribble bot tag not detected
+[INFO] [1777215596.834019945] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.305,0.002) heading=7.7°
+[INFO] [1777215596.882275003] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.002) heading=7.9°
+[INFO] [1777215596.931255281] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.002) heading=8.2°
+[INFO] [1777215596.980389621] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.001) heading=8.4°
+[INFO] [1777215597.029835584] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.001) heading=8.4°
+[INFO] [1777215597.078213224] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.001) heading=8.5°
+[INFO] [1777215597.127039700] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.001) heading=8.5°
+[INFO] [1777215597.175269944] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.001) heading=8.4°
+[INFO] [1777215597.224006242] [localization]: Scribble coordinates: grid=(0, 77) norm=(0.304,0.002) heading=8.1°
+[INFO] [1777215597.274911960] [localization]: Scribble coordinates: grid=(0, 76) norm=(0.303,0.003) heading=7.8°
+[INFO] [1777215597.322722090] [localization]: Scribble coordinates: grid=(0, 76) norm=(0.302,0.003) heading=7.0°
+[INFO] [1777215597.369708136] [localization]: Scribble coordinates: grid=(0, 76) norm=(0.302,0.001) heading=5.4°
+[INFO] [1777215597.418852587] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.467739650] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.516212690] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.564083685] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.613606754] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.663125748] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.711545071] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.759592978] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.809112769] [localization]: Scribble coordinates: grid=(0, 74) norm=(0.294,0.000) heading=357.7°
+[INFO] [1777215597.857540850] [localization]: Scribble coordinates: grid=(0, 74) norm=(0.293,0.000) heading=357.2°
+[INFO] [1777215597.904533766] [localization]: Scribble bot tag not detected
+[INFO] [1777215597.952728902] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.001906943] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.051756392] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.099731676] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.148406533] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.199723386] [localization]: Scribble coordinates: grid=(0, 72) norm=(0.286,0.000) heading=351.1°
+[INFO] [1777215598.248241423] [localization]: Scribble coordinates: grid=(0, 72) norm=(0.285,0.000) heading=349.9°
+[INFO] [1777215598.295602551] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.346787636] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.396627642] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.447976473] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.496753119] [localization]: Scribble bot tag not detected
+[INFO] [1777215598.547776588] [localization]: Scribble coordinates: grid=(0, 71) norm=(0.281,0.000) heading=347.6°
+[INFO] [1777215598.598143552] [localization]: Scribble coordinates: grid=(0, 71) norm=(0.280,0.000) heading=346.9°
+[INFO] [1777215598.648451836] [localization]: Scribble coordinates: grid=(0, 71) norm=(0.280,0.000) heading=346.0°
+[INFO] [1777215598.697696686] [localization]: Scribble coordinates: grid=(0, 70) norm=(0.279,0.000) heading=344.8°
+[INFO] [1777215598.747388778] [localization]: Scribble coordinates: grid=(0, 70) norm=(0.278,0.000) heading=343.6°
+[INFO] [1777215598.798813085] [localization]: Scribble coordinates: grid=(0, 70) norm=(0.276,0.000) heading=342.7°
+[INFO] [1777215598.849011693] [localization]: Scribble coordinates: grid=(0, 69) norm=(0.275,0.000) heading=341.7°
+[INFO] [1777215598.898123201] [localization]: Scribble coordinates: grid=(0, 69) norm=(0.273,0.000) heading=341.0°
+[INFO] [1777215598.949094266] [localization]: Scribble coordinates: grid=(0, 69) norm=(0.272,0.000) heading=338.9°
+[INFO] [1777215598.999296577] [localization]: Scribble coordinates: grid=(0, 68) norm=(0.271,0.000) heading=339.3°
+[INFO] [1777215599.050237940] [localization]: Scribble coordinates: grid=(0, 68) norm=(0.270,0.000) heading=339.0°
+[INFO] [1777215599.101924301] [localization]: Scribble coordinates: grid=(0, 68) norm=(0.270,0.000) heading=337.9°
+[INFO] [1777215599.153544629] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.203601063] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.254793851] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.307242929] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.359154160] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.411907399] [localization]: Scribble coordinates: grid=(0, 68) norm=(0.269,0.000) heading=339.0°
+[INFO] [1777215599.462438555] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.513325774] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.566566327] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.619032311] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.671036386] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.723964204] [localization]: Scribble bot tag not detected
+[INFO] [1777215599.775634603] [localization]: Scribble coordinates: grid=(0, 69) norm=(0.273,0.000) heading=336.3°
+[INFO] [1777215599.828516739] [localization]: Board corner tags not fully detected
+[INFO] [1777215599.880362068] [localization]: Board corner tags not fully detected
+[INFO] [1777215599.933105364] [localization]: Board corner tags not fully detected
+[INFO] [1777215599.985984574] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.037697284] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.091109878] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.144191165] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.195822771] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.247745353] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.299874567] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.352651637] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.406190851] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.458025533] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.509622993] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.562807124] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.614971039] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.666787852] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.719805218] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.771209804] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.825157745] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.878449627] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.931550838] [localization]: Board corner tags not fully detected
+[INFO] [1777215600.984534170] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.033935711] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.087135636] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.139573807] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.193101763] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.245004643] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.298745563] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.350652109] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.402571766] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.455963010] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.509138678] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.562037128] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.613213362] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.665710214] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.718425455] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.770264396] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.821523531] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.874956642] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.929472482] [localization]: Board corner tags not fully detected
+[INFO] [1777215601.981432728] [localization]: Board corner tags not fully detected
+[INFO] [1777215602.033326035] [localization]: Board corner tags not fully detected
+[INFO] [1777215602.086262074] [localization]: Board corner tags not fully detected
+[INFO] [1777215602.138925912] [localization]: Board corner tags not fully detected
+[INFO] [1777215602.191521256] [localization]: Board corner tags not fully detected
+[INFO] [1777215602.244553584] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.296578214] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.347845014] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.400355143] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.453384100] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.505503223] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.558589194] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.609778409] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.663993106] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.716528714] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.769101522] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.821237662] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.874500842] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.926236216] [localization]: Scribble bot tag not detected
+[INFO] [1777215602.977926595] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.031808189] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.084436123] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.135369875] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.188317913] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.241761079] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.294244876] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.344876208] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.397264754] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.450444107] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.502854502] [localization]: Scribble coordinates: grid=(111, 86) norm=(0.339,0.440) heading=341.0°
+[INFO] [1777215603.554529289] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.607081840] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.659506512] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.712006215] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.763733054] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.816890168] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.868771216] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.921639094] [localization]: Scribble bot tag not detected
+[INFO] [1777215603.975859735] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.027440733] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.080639474] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.132807740] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.183869575] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.237480635] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.290242836] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.341541616] [localization]: Scribble coordinates: grid=(142, 84) norm=(0.332,0.560) heading=345.6°
+[INFO] [1777215604.395591511] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.446239360] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.498999376] [localization]: Scribble coordinates: grid=(148, 83) norm=(0.329,0.583) heading=346.0°
+[INFO] [1777215604.551832498] [localization]: Scribble coordinates: grid=(149, 83) norm=(0.328,0.590) heading=345.9°
+[INFO] [1777215604.602775657] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.656002988] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.710030774] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.762522533] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.815453535] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.867880726] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.920260679] [localization]: Scribble bot tag not detected
+[INFO] [1777215604.973797597] [localization]: Scribble coordinates: grid=(165, 83) norm=(0.330,0.650) heading=347.5°
+[INFO] [1777215605.025706754] [localization]: Scribble coordinates: grid=(167, 84) norm=(0.331,0.659) heading=347.5°
+[INFO] [1777215605.078378277] [localization]: Scribble coordinates: grid=(169, 84) norm=(0.331,0.667) heading=347.4°
+[INFO] [1777215605.128900340] [localization]: Scribble coordinates: grid=(171, 84) norm=(0.332,0.676) heading=347.3°
+[INFO] [1777215605.182940976] [localization]: Scribble coordinates: grid=(173, 84) norm=(0.332,0.684) heading=347.1°
+[INFO] [1777215605.234172891] [localization]: Scribble coordinates: grid=(174, 84) norm=(0.331,0.687) heading=348.7°
+[INFO] [1777215605.286295068] [localization]: Scribble coordinates: grid=(173, 83) norm=(0.330,0.682) heading=348.5°
+[INFO] [1777215605.338285608] [localization]: Scribble coordinates: grid=(171, 83) norm=(0.328,0.675) heading=349.5°
+[INFO] [1777215605.392719991] [localization]: Scribble bot tag not detected
+[INFO] [1777215605.445417493] [localization]: Scribble coordinates: grid=(167, 82) norm=(0.325,0.660) heading=352.6°
+[INFO] [1777215605.498207359] [localization]: Scribble coordinates: grid=(166, 82) norm=(0.323,0.654) heading=353.3°
+[INFO] [1777215605.550624587] [localization]: Scribble bot tag not detected
+[INFO] [1777215605.602523615] [localization]: Scribble coordinates: grid=(163, 81) norm=(0.321,0.645) heading=355.6°
+[INFO] [1777215605.654937751] [localization]: Scribble coordinates: grid=(162, 81) norm=(0.320,0.640) heading=356.5°
+[INFO] [1777215605.706437496] [localization]: Scribble bot tag not detected
+[INFO] [1777215605.759453547] [localization]: Scribble bot tag not detected
+[INFO] [1777215605.812287094] [localization]: Scribble coordinates: grid=(159, 80) norm=(0.317,0.628) heading=0.2°
+[INFO] [1777215605.864334796] [localization]: Scribble coordinates: grid=(157, 80) norm=(0.317,0.622) heading=359.4°
+[INFO] [1777215605.917869306] [localization]: Scribble bot tag not detected
+[INFO] [1777215605.970150674] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.021156495] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.073560280] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.127386823] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.175980797] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.232188559] [localization]: Scribble coordinates: grid=(147, 81) norm=(0.319,0.579) heading=358.4°
+[INFO] [1777215606.283426973] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.335028136] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.388348404] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.440248691] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.492765356] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.545392974] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.599649150] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.650478225] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.703800308] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.756514846] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.808116527] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.860142305] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.913558083] [localization]: Scribble bot tag not detected
+[INFO] [1777215606.965320030] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.018888741] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.070498810] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.123328598] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.176292987] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.228993137] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.280694421] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.332283085] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.386415252] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.437412684] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.490723064] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.542317375] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.594596707] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.647847925] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.699589280] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.752721359] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.805224062] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.856510620] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.910111884] [localization]: Scribble bot tag not detected
+[INFO] [1777215607.962098275] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.015126973] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.067882675] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.119058463] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.173052696] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.224500519] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.277652226] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.330779565] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.382207649] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.434616377] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.486772515] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.540523656] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.590860900] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.643799179] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.695309312] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.748126379] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.801156540] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.852773164] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.906690607] [localization]: Scribble bot tag not detected
+[INFO] [1777215608.958800359] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.011952251] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.063631463] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.115236051] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.167399466] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.220505880] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.273131906] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.325213049] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.379045925] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.431283556] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.484126898] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.535645604] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.584859344] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.641517959] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.693179932] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.746958700] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.798001740] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.852025082] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.904232567] [localization]: Scribble bot tag not detected
+[INFO] [1777215609.955911390] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.008296880] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.060623800] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.113615316] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.166314207] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.218847221] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.271321167] [localization]: Scribble coordinates: grid=(1, 76) norm=(0.303,0.005) heading=4.5°
+[INFO] [1777215610.324322126] [localization]: Scribble coordinates: grid=(1, 76) norm=(0.303,0.005) heading=4.9°
+[INFO] [1777215610.376711356] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.428870234] [localization]: Scribble coordinates: grid=(1, 76) norm=(0.303,0.004) heading=5.1°
+[INFO] [1777215610.481591253] [localization]: Scribble coordinates: grid=(0, 76) norm=(0.303,0.004) heading=5.0°
+[INFO] [1777215610.532256638] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.586445133] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.638393064] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.690535906] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.744057250] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.795706594] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.848791381] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.901076304] [localization]: Scribble bot tag not detected
+[INFO] [1777215610.952926391] [localization]: Scribble bot tag not detected
+[INFO] [1777215611.004553978] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.056611919] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.110664055] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.160623495] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.214580046] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.266112510] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.318753239] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.372670996] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.424535027] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.477148757] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.528317398] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.581016067] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.633901813] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.685630799] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.737493663] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.790922626] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.843822760] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.897334475] [localization]: Board corner tags not fully detected
+[INFO] [1777215611.949048832] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.001125679] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.053302889] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.106840139] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.159805157] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.211270923] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.263766366] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.316609486] [localization]: Board corner tags not fully detected
+[INFO] [1777215612.369606946] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.420436910] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.474310393] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.527010172] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.579877624] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.633352027] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.684761020] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.737639414] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.788602535] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.842799529] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.894679744] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.946991980] [localization]: Scribble bot tag not detected
+[INFO] [1777215612.999556566] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.051610507] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.104127579] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.154391940] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.209193701] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.260808603] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.313633132] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.366524933] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.419455731] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.471359629] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.524907823] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.576264079] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.629393713] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.682047644] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.734099623] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.786810049] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.839573620] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.890819347] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.944814543] [localization]: Scribble bot tag not detected
+[INFO] [1777215613.996027884] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.050321686] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.102253285] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.154321614] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.206509619] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.260818456] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.312746278] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.362464089] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.415625573] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.468107258] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.519585689] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.572078004] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.625122311] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.679265217] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.732060341] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.785464305] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.835900115] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.889226993] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.942444898] [localization]: Scribble bot tag not detected
+[INFO] [1777215614.994179328] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.047207655] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.099997575] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.150916865] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.202515102] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.254772324] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.307639571] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.359888405] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.411902368] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.463054232] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.513927748] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.565722358] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.617577056] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.668759603] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.718993003] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.770181032] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.821028994] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.873701054] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.923114870] [localization]: Scribble bot tag not detected
+[INFO] [1777215615.975725268] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.025749869] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.078199761] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.128458381] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.179799545] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.230842992] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.282602809] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.334240876] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.385213791] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.437374798] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.487642418] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.538829428] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.590244827] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.641389969] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.692804943] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.743688625] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.793510242] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.846319550] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.898113419] [localization]: Scribble bot tag not detected
+[INFO] [1777215616.947767995] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.000472903] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.052158559] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.104356396] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.156147173] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.207392085] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.257714682] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.308107273] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.361000278] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.412761353] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.463429182] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.513158492] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.566852044] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.618046257] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.669929971] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.722038519] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.774136105] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.828868705] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.880459720] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.932154338] [localization]: Scribble bot tag not detected
+[INFO] [1777215617.984998031] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.037500381] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.089266456] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.142036785] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.193492941] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.246643091] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.297488239] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.350766510] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.404269096] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.456891807] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.509549867] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.561510037] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.613782054] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.665555554] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.718866526] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.770651562] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.823461740] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.876639000] [localization]: Scribble bot tag not detected
+[INFO] [1777215618.929131184] [localization]: Board corner tags not fully detected
+[INFO] [1777215618.980516975] [localization]: Board corner tags not fully detected
+[INFO] [1777215619.034638308] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.086466008] [localization]: Board corner tags not fully detected
+[INFO] [1777215619.138311447] [localization]: Board corner tags not fully detected
+[INFO] [1777215619.191552201] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.244565863] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.295964060] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.349402317] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.400792440] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.454321802] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.507298429] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.558328711] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.611364315] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.663178812] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.716514967] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.768950433] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.819914942] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.870958278] [localization]: Scribble bot tag not detected
+[INFO] [1777215619.925146846] [localization]: Board corner tags not fully detected
+[INFO] [1777215619.977246191] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.029179587] [localization]: Board corner tags not fully detected
+[INFO] [1777215620.080646944] [localization]: Board corner tags not fully detected
+[INFO] [1777215620.134681581] [localization]: Board corner tags not fully detected
+[INFO] [1777215620.187271850] [localization]: Board corner tags not fully detected
+[INFO] [1777215620.240174594] [localization]: Board corner tags not fully detected
+[INFO] [1777215620.292664834] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.345545080] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.396876930] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.450339834] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.503470968] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.555550314] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.607567036] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.659290947] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.712572458] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.764421712] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.817617692] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.870075694] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.921496685] [localization]: Scribble bot tag not detected
+[INFO] [1777215620.975082320] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.027935772] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.080172865] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.132680696] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.185201896] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.236879830] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.289391327] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.342505759] [localization]: Board corner tags not fully detected
+[INFO] [1777215621.394162824] [localization]: Board corner tags not fully detected
+[INFO] [1777215621.448000661] [localization]: Board corner tags not fully detected
+[INFO] [1777215621.499540791] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.552004255] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.604841930] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.656492847] [localization]: Board corner tags not fully detected
+[INFO] [1777215621.710386328] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.762993522] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.813795765] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.866067726] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.917369856] [localization]: Scribble bot tag not detected
+[INFO] [1777215621.970848648] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.022147352] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.074750305] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.126911275] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.179136684] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.230643816] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.285529940] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.337585141] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.391060136] [localization]: Board corner tags not fully detected
+[INFO] [1777215622.443828743] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.494724571] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.547056527] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.597805183] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.648763469] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.697595684] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.747401413] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.796145394] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.845620594] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.895378698] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.942800542] [localization]: Scribble bot tag not detected
+[INFO] [1777215622.990753826] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.037538831] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.083839671] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.131905502] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.180646741] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.227968056] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.276707111] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.324614991] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.373450186] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.419727232] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.467894647] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.515225776] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.560922793] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.609325338] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.656233093] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.704842917] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.756236262] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.803381646] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.848258617] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.895000293] [localization]: Scribble bot tag not detected
+[INFO] [1777215623.945655641] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.002098605] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.041446810] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.090541596] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.139359514] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.188099551] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.235020582] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.279880129] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.328609314] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.376888424] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.424823894] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.472711794] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.519939357] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.568146065] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.616606789] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.665413117] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.713838844] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.760541375] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.808633092] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.854765408] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.902182012] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.950055987] [localization]: Scribble bot tag not detected
+[INFO] [1777215624.998394629] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.045295477] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.094372894] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.141309665] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.190083624] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.236904831] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.285122408] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.333643795] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.380888282] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.429825155] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.476306795] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.525015019] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.571876666] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.619859336] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.668130984] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.715308106] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.765325338] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.812807973] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.861280234] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.909227833] [localization]: Scribble bot tag not detected
+[INFO] [1777215625.956730282] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.001485707] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.052319429] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.100731121] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.148742825] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.196457794] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.243691912] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.292045442] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.338570227] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.387296986] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.435188515] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.482846544] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.531008478] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.578638694] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.627144341] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.674396977] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.722354093] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.770177090] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.817955240] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.865841899] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.915127836] [localization]: Scribble bot tag not detected
+[INFO] [1777215626.961544852] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.010350994] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.058428786] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.105874720] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.153183888] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.199837681] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.247173477] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.295235344] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.343199793] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.391760325] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.439242756] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.488372725] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.535693095] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.583657248] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.631500355] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.679851496] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.727234046] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.774400577] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.823542470] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.866519739] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.916673404] [localization]: Scribble bot tag not detected
+[INFO] [1777215627.962528668] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.011576069] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.060486073] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.108471724] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.157025997] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.201285757] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.252520448] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.300003028] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.348896663] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.395452519] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.445117445] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.491301405] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.540402783] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.588090791] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.636391288] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.685539291] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.733340809] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.785219393] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.834639616] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.882315180] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.932926846] [localization]: Scribble bot tag not detected
+[INFO] [1777215628.985727968] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.035771198] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.087454353] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.139182152] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.192532861] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.244336414] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.297241046] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.348553564] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.400792897] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.454318222] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.506433768] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.558804369] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.612536584] [localization]: Scribble bot tag not detected
+[INFO] [1777215629.664556917] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.717477918] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.769090338] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.821657016] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.873879869] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.926769762] [localization]: Board corner tags not fully detected
+[INFO] [1777215629.980215500] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.032142395] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.085437756] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.137780396] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.190454880] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.241084229] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.294560706] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.347105755] [localization]: Scribble bot tag not detected
+[INFO] [1777215630.399788128] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.452193226] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.504274497] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.555670194] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.608304866] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.661492810] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.713484718] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.766755988] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.817808675] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.871835292] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.924137843] [localization]: Board corner tags not fully detected
+[INFO] [1777215630.974736324] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.028576290] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.081631392] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.134233253] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.185903427] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.239169050] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.290085580] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.342611520] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.394645981] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.448402953] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.502005771] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.555695712] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.606400241] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.659244248] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.711211881] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.763614071] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.816667785] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.869775512] [localization]: Scribble bot tag not detected
+[INFO] [1777215631.920582107] [localization]: Board corner tags not fully detected
+[INFO] [1777215631.973880393] [localization]: Board corner tags not fully detected
+[INFO] [1777215632.026386928] [localization]: Board corner tags not fully detected
+[INFO] [1777215632.077878394] [localization]: Board corner tags not fully detected
+[INFO] [1777215632.131663457] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.181324716] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.234315619] [localization]: Scribble coordinates: grid=(92, 74) norm=(0.292,0.363) heading=357.9°
+[INFO] [1777215632.286898722] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.339225437] [localization]: Board corner tags not fully detected
+[INFO] [1777215632.390440795] [localization]: Board corner tags not fully detected
+[INFO] [1777215632.444886936] [localization]: Scribble coordinates: grid=(100, 73) norm=(0.289,0.394) heading=358.0°
+[INFO] [1777215632.499705324] [localization]: Scribble coordinates: grid=(102, 73) norm=(0.288,0.402) heading=357.7°
+[INFO] [1777215632.551665161] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.602763695] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.654935849] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.708569016] [localization]: Scribble coordinates: grid=(111, 72) norm=(0.286,0.437) heading=357.1°
+[INFO] [1777215632.760495892] [localization]: Scribble coordinates: grid=(112, 72) norm=(0.285,0.444) heading=356.8°
+[INFO] [1777215632.810981161] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.861861805] [localization]: Scribble bot tag not detected
+[INFO] [1777215632.912391477] [localization]: Scribble coordinates: grid=(118, 71) norm=(0.281,0.468) heading=357.1°
+[INFO] [1777215632.961769147] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.012242009] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.061533797] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.111689129] [localization]: Scribble coordinates: grid=(126, 70) norm=(0.277,0.497) heading=357.2°
+[INFO] [1777215633.159784863] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.208107617] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.257699012] [localization]: Scribble coordinates: grid=(131, 69) norm=(0.273,0.518) heading=355.3°
+[INFO] [1777215633.306522670] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.354134258] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.403566091] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.453315436] [localization]: Scribble coordinates: grid=(139, 68) norm=(0.270,0.548) heading=357.8°
+[INFO] [1777215633.500621733] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.547793930] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.597106013] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.647826947] [localization]: Scribble coordinates: grid=(147, 67) norm=(0.267,0.581) heading=358.3°
+[INFO] [1777215633.696507506] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.743462961] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.793039393] [localization]: Scribble coordinates: grid=(152, 67) norm=(0.266,0.602) heading=356.4°
+[INFO] [1777215633.841472675] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.891684595] [localization]: Scribble bot tag not detected
+[INFO] [1777215633.941710603] [localization]: Scribble coordinates: grid=(158, 67) norm=(0.265,0.624) heading=359.1°
+[INFO] [1777215633.990260043] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.038931750] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.088857600] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.137899167] [localization]: Scribble coordinates: grid=(166, 66) norm=(0.260,0.654) heading=0.0°
+[INFO] [1777215634.186444329] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.235171718] [localization]: Scribble coordinates: grid=(169, 65) norm=(0.259,0.669) heading=357.3°
+[INFO] [1777215634.284238320] [localization]: Scribble coordinates: grid=(171, 65) norm=(0.257,0.675) heading=356.8°
+[INFO] [1777215634.334358487] [localization]: Scribble coordinates: grid=(172, 65) norm=(0.256,0.680) heading=358.4°
+[INFO] [1777215634.381399990] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.431538730] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.480782948] [localization]: Scribble coordinates: grid=(178, 64) norm=(0.254,0.703) heading=358.7°
+[INFO] [1777215634.529154754] [localization]: Scribble coordinates: grid=(180, 64) norm=(0.254,0.711) heading=358.6°
+[INFO] [1777215634.576666072] [localization]: Scribble coordinates: grid=(182, 64) norm=(0.253,0.718) heading=358.7°
+[INFO] [1777215634.626341941] [localization]: Scribble coordinates: grid=(184, 64) norm=(0.253,0.725) heading=357.8°
+[INFO] [1777215634.674530390] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.722259006] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.771566015] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.822542541] [localization]: Scribble coordinates: grid=(190, 63) norm=(0.250,0.752) heading=0.1°
+[INFO] [1777215634.871133033] [localization]: Scribble coordinates: grid=(192, 63) norm=(0.250,0.758) heading=358.9°
+[INFO] [1777215634.919892659] [localization]: Scribble bot tag not detected
+[INFO] [1777215634.968904248] [localization]: Scribble bot tag not detected
+[INFO] [1777215635.018274845] [localization]: Scribble bot tag not detected
+[INFO] [1777215635.067751377] [localization]: Scribble bot tag not detected
+Traceback (most recent call last):
+  File "/home/mbot/scribbles-and-specs/Specs/install/specs/lib/specs/localization.py", line 221, in <module>
+    main()
+  File "/home/mbot/scribbles-and-specs/Specs/install/specs/lib/specs/localization.py", line 217, in main
+    rclpy.shutdown()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/__init__.py", line 134, in shutdown
+    _shutdown(context=context)
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/utilities.py", line 82, in shutdown
+    context.shutdown()
+  File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/context.py", line 129, in shutdown
+    self.__context.shutdown()
+rclpy._rclpy_pybind11.RCLError: failed to shutdown: rcl_shutdown already called on the given context, at ./src/rcl/init.c:333
+[ros2run]: Process exited with failure 1

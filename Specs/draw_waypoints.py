@@ -55,17 +55,17 @@ def star(cx, cy, s):
 
 
 def line(cx, cy, s):
-    return [(cx - s, cy - s), (cx + s, cy + s)]
+    return [(cx, cy - s), (cx, cy + s)]
 
 
 def zigzag(cx, cy, s, rows=4):
-    pts = []
-    step = 2 * s / rows
-    for i in range(rows + 1):
-        y = cy - s + i * step
-        x = cx - s if i % 2 == 0 else cx + s
-        pts.append((x, y))
-    return pts
+    pts = [(0.3, 0.3), (0.3, 0.7), (0.35, 0.7), (0.35, 0.3), (0.4, 0.3), (0.4, 0.7), (0.45, 0.7), (0.45, 0.3), (0.5, 0.3), (0.5, 0.7), (0.55, 0.7), (0.55, 0.3), (0.6, 0.3), (0.6, 0.7), (0.65, 0.7), (0.65, 0.3), (0.7, 0.3), (0.7, 0.7)]
+  #  step = 2 * s / rows
+  #  for i in range(rows + 1):
+  #      y = cy - s + i * step
+  #      x = cx - s if i % 2 == 0 else cx + s
+  #      pts.append((x, y))
+    return pts+pts[::-1]
 
 
 SHAPES = {
