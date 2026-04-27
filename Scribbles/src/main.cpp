@@ -28,13 +28,13 @@ WheelSpeed wheelSpeed0;
 WheelSpeed wheelSpeed1;
 WheelSpeed wheelSpeed2;
 
-PID_FF pid0(0.08929, 0.0188, 0.01, 0.1, 0.001); //  0.02, 0.1, 0.002
-PID_FF pid1(0.08105, 0.02559, 0.01, 0.1, 0.001);
-PID_FF pid2(0.08084, 0.02601, 0.01, 0.1, 0.001);
+PID_FF pid0(0.08929, 0.0188, 0.02, 0.1, 0.002); //  0.02, 0.1, 0.002
+PID_FF pid1(0.08105, 0.02559, 0.02, 0.1, 0.002);
+PID_FF pid2(0.08084, 0.02601, 0.02, 0.1, 0.002);
 
 LookaheadController lookaheadController;
 
-WheelCommand wheel_speed_cmd;
+WheelCommand wheel_speed_cmd = {0, 0, 0};
 
 constexpr float INCH_TO_METER = 0.0254f;
 constexpr float whiteboard_width = 45.0f * INCH_TO_METER;
@@ -51,6 +51,8 @@ struct Pose
 
 Pose bot_loc = {false, 0, 0, 0};
 Pose current_wp = {false, 0, 0, 0};
+
+long last_recvd_loc_time = 0;
 
 // Decode 3-byte message:
 //   byte[0]: bit7 = type (0=location, 1=waypoint), bits6..0 = heading_7bit
@@ -126,6 +128,8 @@ void setup()
 
   server.begin();
   Serial.printf("Socket server listening on port %u\n", SERVER_PORT);
+
+  pinMode(32, INPUT_PULLDOWN); // Button to reset bot location
 #endif
 }
 
@@ -135,6 +139,7 @@ float clamp(float val, float min_val, float max_val)
                                                      : val;
 }
 
+static float motor_max_pwm = 0.25f; // Max PWM value to prevent overdriving the motors.
 void driveMotor(HBridgeMotor &motor, float speed_cmd)
 {
   if (abs(speed_cmd) < 0.005f)
@@ -143,7 +148,7 @@ void driveMotor(HBridgeMotor &motor, float speed_cmd)
   }
   else
   {
-    motor.set(clamp(abs(speed_cmd), 0.0f, 0.15f), speed_cmd >= 0.0f);
+    motor.set(clamp(abs(speed_cmd), 0.0f, motor_max_pwm), speed_cmd >= 0.0f);
   }
 }
 
@@ -221,6 +226,11 @@ void loop()
       Serial.println("Client connected");
     }
   }
+  
+  bool eraseMode = digitalRead(32);
+  lookaheadController.setEraseMode(eraseMode);
+  if (eraseMode) motor_max_pwm = 0.35f;
+  else motor_max_pwm = 0.25f;
 
   if (client && client.connected())
   {
@@ -241,6 +251,7 @@ void loop()
         }
         else if (msg_type == LOCATION_MSG_TYPE)
         {
+          last_recvd_loc_time = millis();
           if (!bot_loc.valid)
           {
             // If location is not valid, stop the bot and reset.
@@ -257,22 +268,33 @@ void loop()
       }
     }
   }
+  
+  if (millis() - last_recvd_loc_time > 2000)
+  {
+    Serial.println("Location data timeout. Stopping the bot.");
+    wheel_speed_cmd = {0, 0, 0};
+    motor0.stop();
+    motor1.stop();
+    motor2.stop();
+  }
+  else
+  {
+    float wheel0Speed = wheelSpeed0.calculateSpeed();
+    float wheel1Speed = wheelSpeed1.calculateSpeed();
+    float wheel2Speed = wheelSpeed2.calculateSpeed();
+    // Serial.printf("SPEED wheel0=%f wheel1=%f wheel2=%f\n", wheel0Speed, wheel1Speed, wheel2Speed);
 
-  float wheel0Speed = wheelSpeed0.calculateSpeed();
-  float wheel1Speed = wheelSpeed1.calculateSpeed();
-  float wheel2Speed = wheelSpeed2.calculateSpeed();
-  // Serial.printf("SPEED wheel0=%f wheel1=%f wheel2=%f\n", wheel0Speed, wheel1Speed, wheel2Speed);
+    float motor0Output = pid0.update(wheel_speed_cmd.u0, wheel0Speed);
+    float motor1Output = pid1.update(wheel_speed_cmd.u1, wheel1Speed);
+    float motor2Output = pid2.update(wheel_speed_cmd.u2, wheel2Speed);
 
-  float motor0Output = pid0.update(wheel_speed_cmd.u0, wheel0Speed);
-  float motor1Output = pid1.update(wheel_speed_cmd.u1, wheel1Speed);
-  float motor2Output = pid2.update(wheel_speed_cmd.u2, wheel2Speed);
+    // Serial.printf("Driving motors with outputs: %f, %f, %f\n", motor0Output, motor1Output, motor2Output);
 
-  // Serial.printf("Driving motors with outputs: %f, %f, %f\n", motor0Output, motor1Output, motor2Output);
+    driveMotor(motor0, motor0Output);
+    driveMotor(motor1, motor1Output);
+    driveMotor(motor2, motor2Output);
 
-  driveMotor(motor0, motor0Output);
-  driveMotor(motor1, motor1Output);
-  driveMotor(motor2, motor2Output);
-
+  }
   delay(200);
 #endif
 }
