@@ -33,68 +33,7 @@ BOARD_W_IN = 45.0
 BOARD_H_IN = 29.0
 
 
-# ── Image → ordered pixel path (skeleton-walked from an endpoint) ──────────
-
-def _skeletonize(binary):
-    """Reduce binary (uint8 0/255) to a 1-pixel-wide centerline."""
-    if hasattr(cv2, 'ximgproc') and hasattr(cv2.ximgproc, 'thinning'):
-        return cv2.ximgproc.thinning(binary, thinningType=cv2.ximgproc.THINNING_ZHANGSUEN)
-    # Fallback: Lantuéjoul morphological skeleton (no opencv-contrib needed).
-    skel = np.zeros_like(binary)
-    img = binary.copy()
-    kernel = cv2.getStructuringElement(cv2.MORPH_CROSS, (3, 3))
-    while cv2.countNonZero(img) > 0:
-        eroded = cv2.erode(img, kernel)
-        opened = cv2.dilate(eroded, kernel)
-        skel = cv2.bitwise_or(skel, cv2.subtract(img, opened))
-        img = eroded
-    return skel
-
-
-def _largest_component(skel):
-    n, labels = cv2.connectedComponents(skel)
-    if n <= 2:
-        return skel, max(0, n - 1)
-    sizes = [int((labels == i).sum()) for i in range(1, n)]
-    keep = 1 + int(np.argmax(sizes))
-    out = ((labels == keep).astype(np.uint8)) * 255
-    return out, n - 1
-
-
-def _find_endpoints(skel):
-    """Endpoints: skeleton pixels with exactly 1 of 8 neighbors set."""
-    skel_bin = (skel > 0).astype(np.uint8)
-    kernel = np.array([[1, 1, 1],
-                        [1, 0, 1],
-                        [1, 1, 1]], dtype=np.uint8)
-    nbrs = cv2.filter2D(skel_bin, -1, kernel)
-    return np.argwhere((skel_bin > 0) & (nbrs == 1))
-
-
-def _walk_skeleton(skel, start_rc):
-    """Walk the skeleton from start_rc (row, col); returns ordered (x, y)."""
-    work = skel.copy()
-    h, w = work.shape
-    r, c = int(start_rc[0]), int(start_rc[1])
-    path = [(c, r)]
-    work[r, c] = 0
-    # 4-connected neighbors first so straight-line segments stay smooth.
-    deltas = ((-1, 0), (1, 0), (0, -1), (0, 1),
-              (-1, -1), (-1, 1), (1, -1), (1, 1))
-    while True:
-        nxt = None
-        for dr, dc in deltas:
-            nr, nc = r + dr, c + dc
-            if 0 <= nr < h and 0 <= nc < w and work[nr, nc] > 0:
-                nxt = (nr, nc)
-                break
-        if nxt is None:
-            break
-        r, c = nxt
-        path.append((c, r))
-        work[r, c] = 0
-    return path
-
+# ── Image → ordered pixel path ──────────────────────────────────────────────
 
 def extract_path(image_path, simplify_eps=2.0, invert='auto', preview_path=''):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
@@ -109,31 +48,18 @@ def extract_path(image_path, simplify_eps=2.0, invert='auto', preview_path=''):
 
     _, binary = cv2.threshold(work, 50, 255, cv2.THRESH_BINARY)
 
-    skel = _skeletonize(binary)
-    if cv2.countNonZero(skel) == 0:
-        raise ValueError("Empty skeleton — check threshold / invert")
+    contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+    if not contours:
+        raise ValueError("No contours found in image — check threshold / invert")
 
-    # Drop any spurious smaller strokes; assume a single line per the user's
-    # contract, but pick the largest connected component just in case.
-    skel, n_strokes = _largest_component(skel)
+    # Largest by perimeter is the most useful "outline" for line drawings.
+    contour = max(contours, key=lambda c: cv2.arcLength(c, closed=True))
+    if simplify_eps > 0:
+        contour = cv2.approxPolyDP(contour, simplify_eps, closed=True)
 
-    endpoints = _find_endpoints(skel)
-    if len(endpoints) >= 1:
-        # Topmost-leftmost endpoint as the deterministic start.
-        endpoints = endpoints[np.lexsort((endpoints[:, 1], endpoints[:, 0]))]
-        start_rc = endpoints[0]
-    else:
-        # Closed loop with no real endpoint: just pick any pixel.
-        start_rc = np.argwhere(skel > 0)[0]
-
-    path = _walk_skeleton(skel, start_rc)
-    pts = np.array(path, dtype=np.float32)
-
-    # Simplify the OPEN polyline (do not close the loop — it's a line).
-    if simplify_eps > 0 and len(pts) > 2:
-        simplified = cv2.approxPolyDP(pts.reshape(-1, 1, 2),
-                                       simplify_eps, closed=False)
-        pts = simplified.reshape(-1, 2).astype(np.float32)
+    pts = contour.reshape(-1, 2).astype(np.float32)
+    # Close the loop so the bot returns to the starting point.
+    pts = np.vstack([pts, pts[0:1]])
 
     if preview_path:
         preview = cv2.cvtColor(work, cv2.COLOR_GRAY2BGR)
@@ -143,15 +69,10 @@ def extract_path(image_path, simplify_eps=2.0, invert='auto', preview_path=''):
             cv2.line(preview, p0, p1, (0, 0, 255), 2)
         for px, py in pts.astype(int):
             cv2.circle(preview, (int(px), int(py)), 3, (0, 255, 0), -1)
-        if len(pts):
-            sp = pts[0].astype(int)
-            cv2.circle(preview, (int(sp[0]), int(sp[1])), 9, (255, 0, 0), 2)
-            cv2.putText(preview, "START", (int(sp[0]) + 11, int(sp[1]) - 11),
-                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
         cv2.imwrite(preview_path, preview)
 
     h, w = img.shape
-    return pts, w, h, n_strokes
+    return pts, w, h, len(contours)
 
 
 # ── Resample a polyline to uniform arc-length spacing ──────────────────────
